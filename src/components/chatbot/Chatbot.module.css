@@ -1,0 +1,767 @@
+/* Professional Chatbot Styling - Consistent with Site Design */
+
+/* Main Chatbot Container - Much Larger & Professional */
+.chatbotContainer {
+  position: fixed;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(203, 213, 225, 0.2),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(16px);
+  /* Much larger container */
+  width: 700px !important;
+  height: 750px !important;
+  max-width: 700px !important;
+  max-height: 750px !important;
+}
+
+/* Professional Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Action Buttons */
+.actionButton {
+  padding: 0.875rem;
+  border-radius: 0.875rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+.actionButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.actionButton:active {
+  transform: scale(0.95);
+}
+
+/* Messages Container */
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fafbff 0%, #f1f5f9 100%);
+  position: relative;
+  min-height: 0;
+  padding: 1rem 0;
+  }
+
+.messagesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #94a3b8 0%, #64748b 100%);
+  background-clip: content-box;
+}
+
+/* Love Mode Styling - Keep it fun but professional */
+.loveMode .header {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+}
+
+.loveMode .messagesContainer {
+  background: linear-gradient(180deg, #fdf2f8 0%, #fce7f3 100%);
+}
+
+.loveMode .actionButton {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.loveMode .actionButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+  }
+
+/* Message Bubbles - Compact & Professional */
+.messageBubble {
+  word-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.5;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 85%;
+}
+
+.messageBubble:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure proper text formatting within message bubbles */
+.messageBubble ul {
+  margin: 4px 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.messageBubble li {
+  margin: 2px 0 !important;
+  padding-left: 16px !important;
+  position: relative !important;
+  line-height: 1.5 !important;
+  list-style: none !important;
+}
+
+.messageBubble li span:first-child {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.messageBubble strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+.messageBubble div {
+  line-height: 1.4;
+}
+
+/* User message styling */
+.messageBubble.user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-left: auto;
+  margin-right: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+/* Assistant message styling */
+.messageBubble.assistant {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: #1e293b;
+  margin-left: 1rem;
+  margin-right: auto;
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  }
+
+/* Love mode message bubbles */
+.loveMode .messageBubble.user {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+}
+
+.loveMode .messageBubble.assistant {
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  color: #831843;
+}
+
+/* Input area styling */
+    .inputArea {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-top: 1px solid rgba(203, 213, 225, 0.3);
+  backdrop-filter: blur(8px);
+  flex-shrink: 0;
+  }
+
+/* Menu styling - Updated for bottom positioning */
+.menu {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  border-radius: 1rem;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(16px);
+  max-height: 400px;
+  overflow-y: auto;
+  }
+
+.menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 3px;
+}
+
+.menuItem {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menuItem:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  transform: translateX(4px);
+}
+
+/* Loading state improvements - FIXED BACKGROUND */
+.loadingMessage {
+  background: transparent !important;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Minimized State */
+.minimized {
+  height: 72px !important;
+  width: 320px !important;
+  max-width: 320px !important;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.minimized:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 20px 40px -12px rgba(0, 0, 0, 0.25),
+    0 8px 16px -4px rgba(0, 0, 0, 0.1);
+  }
+
+.minimized .header {
+  padding: 1.25rem 1.5rem;
+  border-radius: 2.5rem;
+  font-size: 0.95rem;
+}
+
+/* Fullscreen State */
+.fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border: none;
+}
+
+.fullscreen .header {
+  border-radius: 0;
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+}
+
+.fullscreen .messagesContainer {
+  border-radius: 0;
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+}
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.messageBubble {
+  animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading animation */
+.loadingDots {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Interactive button effects */
+.chatbotContainer button[onclick] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.chatbotContainer button[onclick]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.25);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.chatbotContainer button[onclick]:active {
+    transform: translateY(0);
+}
+
+/* Dark mode support - Same professional styling for desktop and mobile */
+@media (prefers-color-scheme: dark) {
+  .chatbotContainer {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    border-color: rgba(71, 85, 105, 0.3);
+    color: #f1f5f9;
+  }
+
+  .messagesContainer {
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  }
+
+  .messageBubble.assistant {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #f1f5f9;
+    border-color: rgba(71, 85, 105, 0.3);
+  }
+
+  .inputArea {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    border-color: rgba(71, 85, 105, 0.3);
+  }
+
+  .menu {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    border-color: rgba(71, 85, 105, 0.3);
+  }
+
+  .menuItem:hover {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  }
+
+  .loveMode.chatbotContainer {
+    background: linear-gradient(145deg, #4c1d95 0%, #1e1b4b 100%);
+  }
+
+  .loveMode .messagesContainer {
+    background: linear-gradient(180deg, #1e1b4b 0%, #0f0f23 100%);
+  }
+
+  .loveMode .messageBubble.assistant {
+    background: linear-gradient(135deg, #4c1d95 0%, #6b21a8 100%);
+    color: #fce7f3;
+  }
+
+
+}
+
+/* Focus states for accessibility */
+.actionButton:focus,
+.chatbotContainer button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth entry animation for the chatbot */
+.chatbotContainer {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive Design - Mobile uses dark theme by default */
+@media (max-width: 768px) {
+  .chatbotContainer {
+    /* Mobile always uses dark professional styling */
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    /* Dark theme by default on mobile */
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%) !important;
+    border: none !important;
+    box-shadow: none;
+    backdrop-filter: blur(16px);
+    color: #f1f5f9 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .header {
+    /* Dark header styling for mobile */
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 1.5rem 1.5rem 0 0;
+    font-size: 1rem;
+    color: white !important;
+    font-weight: 600;
+  }
+
+  .messagesContainer {
+    /* Dark messages container for mobile */
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%) !important;
+    padding: 1rem 0;
+    flex: 1 !important;
+    overflow-y: auto !important;
+    /* Enable momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .inputArea {
+    /* Dark input area for mobile - fixed positioning */
+    padding: 1rem 1rem 1rem 1rem !important;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
+    border-top: 1px solid rgba(71, 85, 105, 0.3) !important;
+    backdrop-filter: blur(8px);
+    flex-shrink: 0 !important;
+    /* Ensure input area stays at bottom and visible */
+    position: relative !important;
+    z-index: 1001 !important;
+    /* Add safe area padding for notch phones */
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .messageBubble {
+    /* Professional message styling - same as desktop */
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .messageBubble.user {
+    /* User message - keep same purple gradient */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-right: 1rem;
+  }
+
+  .messageBubble.assistant {
+    /* Assistant message - dark styling for mobile */
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(71, 85, 105, 0.3) !important;
+    margin-left: 1rem;
+  }
+
+  /* Love mode mobile - keep same styling as desktop */
+  .loveMode .header {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  }
+
+  .loveMode .messagesContainer {
+    background: linear-gradient(180deg, #fdf2f8 0%, #fce7f3 100%);
+  }
+
+  .loveMode .messageBubble.user {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  }
+
+  .loveMode .messageBubble.assistant {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    border: 1px solid rgba(236, 72, 153, 0.2);
+    color: #831843;
+  }
+
+  /* Mobile-optimized welcome message styling - compact spacing */
+  .messageBubble.assistant strong {
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.125rem;
+    font-size: 0.9rem;
+  }
+
+  .messageBubble.assistant strong:first-child {
+    margin-top: 0;
+  }
+
+  /* Ensure buttons keep professional styling on mobile */
+  .messageBubble.assistant button {
+    margin: 0.25rem 0.125rem;
+    flex-shrink: 0;
+    /* Keep professional button gradients like desktop */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .messageBubble.assistant button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.25);
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  }
+
+  /* Better line spacing for mobile */
+  .messageBubble.assistant {
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Minimized state on mobile - dark styling */
+  .minimized {
+    width: 280px !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
+    height: 64px !important;
+    border-radius: 2rem !important;
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%) !important;
+    border: 1px solid rgba(71, 85, 105, 0.3) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .minimized .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 2rem;
+    padding: 1.25rem 1.5rem;
+    color: white !important;
+  }
+
+  /* Force dark menu styling on mobile */
+  .menu {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%) !important;
+    border: 1px solid rgba(71, 85, 105, 0.3) !important;
+    color: #f1f5f9 !important;
+  }
+
+  .menuItem {
+    color: #f1f5f9 !important;
+  }
+
+  .menuItem:hover {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+    color: #f1f5f9 !important;
+  }
+
+  /* Menu section headers (like "Quick Actions") */
+  .menu .text-gray-500 {
+    color: #94a3b8 !important;
+  }
+
+  /* Menu section dividers */
+  .menu hr {
+    border-color: rgba(71, 85, 105, 0.3) !important;
+  }
+
+  /* Fix input form layout on mobile */
+  .inputArea form {
+    gap: 0.75rem !important;
+    align-items: stretch !important;
+  }
+
+  /* Input textarea mobile optimization */
+  .inputArea textarea {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    min-height: 44px !important; /* iOS touch target */
+    max-height: 100px !important;
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
+    line-height: 1.4 !important;
+    resize: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  /* Button sizing for mobile touch targets */
+  .inputArea button {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 12px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* File selection area mobile optimization */
+  .inputArea .space-y-3 > div:first-child {
+    max-height: 80px !important;
+    overflow-y: auto !important;
+  }
+
+  /* Selected files display mobile */
+  .inputArea .flex.flex-wrap.gap-2 {
+    max-height: 60px !important;
+    overflow-y: auto !important;
+  }
+
+  /* Ensure hamburger menu doesn't overlap input */
+  .menu {
+    bottom: 80px !important;
+    right: 1rem !important;
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  /* Mobile keyboard handling */
+  .inputArea {
+    /* Fix for mobile keyboard - use viewport units that adapt to keyboard */
+    position: sticky !important;
+    bottom: 0 !important;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
+    border-top: 1px solid rgba(71, 85, 105, 0.3) !important;
+    z-index: 1001 !important;
+  }
+
+  /* Ensure input gets focus and brings up keyboard properly */
+  .inputArea textarea:focus {
+    transform: none !important;
+    /* Force keyboard to appear on mobile */
+    -webkit-user-select: text !important;
+    user-select: text !important;
+  }
+
+  /* Prevent zoom on iOS when focusing input */
+  .inputArea textarea {
+    -webkit-text-size-adjust: 100% !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Adjust chatbot container for keyboard on mobile */
+  .chatbotContainer {
+    /* Use viewport height that adjusts to keyboard */
+    height: 100vh !important;
+    height: 100dvh !important; /* Dynamic viewport height for mobile */
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    /* Ensure container resizes with virtual keyboard */
+    resize: none !important;
+    overflow: hidden !important;
+  }
+
+  /* Additional mobile environment handling */
+  @supports (height: 100dvh) {
+    .chatbotContainer {
+      height: 100dvh !important;
+      max-height: 100dvh !important;
+    }
+  }
+
+  /* iOS specific fixes for keyboard */
+  @supports (-webkit-touch-callout: none) {
+    .chatbotContainer {
+      /* iOS Safari specific adjustments */
+      height: -webkit-fill-available !important;
+      min-height: -webkit-fill-available !important;
+    }
+    
+    .messagesContainer {
+      /* Better scroll behavior on iOS */
+      -webkit-overflow-scrolling: touch !important;
+      overscroll-behavior: contain !important;
+    }
+  }
+
+  /* Messages container should fill available space */
+  .messagesContainer {
+    height: auto !important;
+    min-height: 0 !important;
+    flex: 1 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* Desktop positioning for larger chatbot */
+@media (min-width: 769px) {
+  .chatbotContainer {
+    bottom: 2rem !important;
+    right: 2rem !important;
+  }
+
+  /* Desktop welcome message styling - tighter spacing for section headers */
+  .messageBubble.assistant strong {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .messageBubble.assistant strong:first-child {
+    margin-top: 0.5rem;
+  }
+
+  /* Better button layout on desktop */
+  .messageBubble.assistant button {
+    margin: 0.25rem 0.25rem;
+    display: inline-block;
+  }
+
+  /* Proper line height for desktop */
+  .messageBubble.assistant {
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+}
+

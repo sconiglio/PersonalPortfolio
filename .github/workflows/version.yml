@@ -1,0 +1,47 @@
+name: "Increment Version on Push"
+
+on:
+  push:
+    branches:
+      - main
+      - revert-test-main
+    paths-ignore:
+      - "portfolio/package.json" # Prevent infinite loops
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: "Setup pnpm"
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.15.4
+
+      - name: "Install dependencies"
+        run: pnpm install
+
+      - name: "Increment version"
+        working-directory: ./portfolio
+        run: node scripts/version.js
+
+      - name: "Commit and push changes"
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Bump version [skip ci]"
+          file_pattern: "portfolio/package.json"
+          commit_user_name: "GitHub Actions"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions <actions@github.com>"
