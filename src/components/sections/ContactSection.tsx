@@ -22,12 +22,69 @@ import "react-datepicker/dist/react-datepicker.css";
 import { format as formatDate, parse as parseDate } from "date-fns";
 import { FiGithub, FiMail } from "react-icons/fi";
 
+/**
+ * Contact form data interface
+ */
+interface ContactFormData {
+  name: string;
+  email: string;
+  company: string;
+  message: string;
+}
+
+/**
+ * Meeting scheduling data interface
+ */
+interface MeetingFormData {
+  name: string;
+  email: string;
+  company: string;
+  selectedDate: Date | null;
+  selectedTime: string;
+  message: string;
+  meetingType: string;
+}
+
+/**
+ * Contact section props interface
+ */
 interface ContactSectionProps {
+  /** External form type control */
   externalFormType?: "none" | "message" | "calendar";
+  /** Callback for form type changes */
   onFormTypeChange?: (formType: "none" | "message" | "calendar") => void;
+  /** Whether tour is active */
   tourActive?: boolean;
 }
 
+/**
+ * Contact Section Component
+ *
+ * A comprehensive contact section that provides multiple ways for visitors to get in touch:
+ * - Simple message form
+ * - Meeting scheduling with calendar integration
+ * - Social media links
+ * - Contact information display
+ *
+ * Features:
+ * - Form validation and submission handling
+ * - Meeting scheduling with date/time picker
+ * - Responsive design with animations
+ * - Tour integration for guided experience
+ * - Version tracking and status updates
+ *
+ * @param props - ContactSectionProps
+ * @returns JSX.Element
+ *
+ * @example
+ * ```tsx
+ * <ContactSection
+ *   externalFormType="message"
+ *   onFormTypeChange={(type) => console.log(type)}
+ *   tourActive={true}
+ * />
+ * ```
+ */
 export function ContactSection({
   externalFormType,
   onFormTypeChange,
