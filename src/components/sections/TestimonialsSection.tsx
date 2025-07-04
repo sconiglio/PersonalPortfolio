@@ -18,46 +18,7 @@ interface Testimonial {
 }
 
 const testimonialsData: Testimonial[] = [
-  {
-    name: "Jayna Tortora",
-    title: "Business Owner / Investor",
-    company: "Tutora",
-    image: "/logos/jayna.jpeg",
-    quote: `Lawrence worked for Tutora for several years, during which he's contributed meaningfully across both instructional and operational areas. He has served as a Computer Science tutor, Math tutor, ACT Math tutor, and AI Product Consultant. His teaching spans foundational algebra to advanced Java and data structures, and he consistently delivers lessons that are clear, patient, and adaptable to each student's needs.\n\nOn the operational side, Lawrence helped improve our internal systems by connecting the tools we already used—Zoom, Google Suite, and WhatsApp—with automation solutions he built using App Scripts, Otter.ai, OpenAI's ChatGPT, and Dola. These tools were designed to streamline invoicing, scheduling, scoring, and tutor coordination. While not all of them are fully implemented yet, we've already seen the value they can bring in reducing manual effort and improving consistency.\n\nHe also developed over 100 custom TI-BASIC calculator programs that continue to be valuable for our students preparing for standardized tests. His work has shown how AI and automation can be practically and effectively applied in an education setting, both to enhance the student experience and to support day-to-day operations.\n\nLawrence approaches challenges with care, technical skill, and a strong sense of ownership. He takes time to understand problems before proposing solutions and ensures anything he builds is both usable and sustainable. Whether supporting students, improving workflows, or introducing new tools, he brings structure, thoughtfulness, and follow-through. His contributions continue to enhance our tutoring offerings and infrastructure.`,
-    linkedinUrl: "https://www.linkedin.com/in/jaynatortora/",
-  },
-  {
-    name: "Casey Justus",
-    title: "Director - Strategic Sourcing",
-    company: "Bath & Body Works",
-    image: "/logos/casey.png",
-    quote: `I had the pleasure of working with Lawrence when he supported our team at Bath & Body Works during a project with Kearney. Lawrence approached every conversation with enthusiasm, curiosity, and a strong technical foundation that helped bridge the gap between strategy and implementation. He quickly established himself as a team leader through our direct interactions.\n\nHe took the time to understand our sourcing challenges and worked closely with us to shape an AI-driven supplier evaluation approach. What stood out was his ability to clearly explain what the solution could (and couldn't) do — helping our team feel confident in what we were building together.\n\nLawrence was collaborative, thoughtful, and always willing to roll up his sleeves to get things right. I truly enjoyed working with him and look forward to seeing all that he accomplishes next.`,
-    linkedinUrl: "https://www.linkedin.com/in/casey-justus-a7189736/",
-  },
-  {
-    name: "JJ Xu",
-    title: "Founder & CEO",
-    company: "TalkMeUp",
-    image: "/logos/JJ.jpeg",
-    quote: `I had the pleasure of mentoring Lawrence during his time in my Lean Entrepreneurship course, where he developed the first version of Expired Solutions. From the start, Lawrence approached every challenge with curiosity, grit, and a clear desire to create something meaningful.\n\nHe combined his technical background with a strong product mindset, conducting thoughtful customer discovery and iterating quickly based on feedback. What started as a class project got quickly evolved into a finalist in a venture competition. I'm excited to see where he goes next.`,
-    linkedinUrl: "https://www.linkedin.com/in/jj-jiaojiao-xu/",
-  },
-  {
-    name: "Wendy Williams",
-    title: "IT Director",
-    company: "University of Florida",
-    image: "/logos/Wendy.jpeg",
-    quote: `Lawrence Hua was one of my top System Administrators I've had over the last 14 years. He is a conscientious worker and was ready to take on any task I gave him. We have a smaller IT department so we are asked to do many diverse tasks, Lawrence was wonderful in determining what needed to be done and taking on the responsibility of completing the various projects. Lawrence has a very pleasant demeanor and got along well with all the office staff and administration. He was well liked and is missed by everyone. Lawrence is a well spoken, intelligent and hard working individual and he will serve whomever he works for well.`,
-    linkedinUrl: "https://www.linkedin.com/in/wendy-williams-873b7538",
-  },
-  {
-    name: "Shyam Sundar",
-    title: "Android Frameworks Engineer",
-    company: "Motorola Solutions",
-    image: "/logos/Shyam.jpeg",
-    quote: `Over this past summer, I was Lawrence's Mentor during his Android Software Developer Internship. He always starts the day with "Happy (that)day!" which shows his enthusiasm and energy, he exhibited great skills with his ability to solve complex issues on the front-end, dedication to stay motivated even through a fully online program and adapt to Motorola's technology quickly. He always went the extra mile to ensure all tasks assigned were done to the best of his ability. My time mentoring him was well complemented by his technical ability, hard work, and enthusiasm.`,
-    linkedinUrl: "https://www.linkedin.com/in/shyamsundarn/",
-  },
+  // Testimonials section removed - users can add their own testimonials here
 ];
 
 // Function to format testimonial text with bold markdown

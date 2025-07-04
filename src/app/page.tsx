@@ -37,7 +37,7 @@ import { AboutSection } from "../components/sections/AboutSection";
 import { SkillsSection } from "../components/sections/SkillsSection";
 import { TimelineSection } from "../components/sections/TimelineSection";
 import { ProjectsSection } from "../components/sections/ProjectsSection";
-import { TestimonialsSection } from "../components/sections/TestimonialsSection";
+// import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { ContactSection } from "../components/sections/ContactSection";
 import FloatingChatbot from "../components/chatbot/FloatingChatbot";
 import VisitorTracker from "../components/analytics/VisitorTracker";
@@ -1990,7 +1990,7 @@ export default function ModernHome() {
       <ProjectsSection />
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* Contact Section */}
       <ContactSection

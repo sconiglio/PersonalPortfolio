@@ -36,47 +36,37 @@ export function HeroSection({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Dynamic text gallery with mobile-friendly versions
+  // Default text gallery with mobile-friendly versions
   const textGallery = [
     {
-      text: "Impactful Digital Experiences",
-      mobileText: "Digital Experiences",
-      gradient: "from-blue-400 via-purple-400 to-pink-400",
+      text: "Product Strategy",
+      mobileText: "Product Strategy",
+      gradient: "from-gray-400 via-gray-500 to-gray-600",
     },
     {
-      text: "Intelligent Automation Systems",
-      mobileText: "AI Automation",
-      gradient: "from-green-400 via-emerald-400 to-teal-400",
+      text: "User Experience",
+      mobileText: "User Experience",
+      gradient: "from-gray-400 via-gray-500 to-gray-600",
     },
     {
-      text: "Data-Driven Business Insights",
-      mobileText: "Business Insights",
-      gradient: "from-orange-400 via-red-400 to-pink-400",
+      text: "Business Growth",
+      mobileText: "Business Growth",
+      gradient: "from-gray-400 via-gray-500 to-gray-600",
     },
     {
-      text: "Scalable Product Platforms",
-      mobileText: "Product Platforms",
-      gradient: "from-cyan-400 via-blue-400 to-purple-400",
+      text: "Market Analysis",
+      mobileText: "Market Analysis",
+      gradient: "from-gray-400 via-gray-500 to-gray-600",
     },
     {
-      text: "Innovative User Journeys",
-      mobileText: "User Journeys",
-      gradient: "from-yellow-400 via-orange-400 to-red-400",
+      text: "Team Leadership",
+      mobileText: "Team Leadership",
+      gradient: "from-gray-400 via-gray-500 to-gray-600",
     },
     {
-      text: "Strategic Growth Solutions",
-      mobileText: "Growth Solutions",
-      gradient: "from-purple-400 via-violet-400 to-blue-400",
-    },
-    {
-      text: "Seamless AI Integrations",
-      mobileText: "AI Integrations",
-      gradient: "from-emerald-400 via-green-400 to-cyan-400",
-    },
-    {
-      text: "Market Opportunities",
-      mobileText: "Market Growth",
-      gradient: "from-pink-400 via-rose-400 to-red-400",
+      text: "Data Insights",
+      mobileText: "Data Insights",
+      gradient: "from-gray-400 via-gray-500 to-gray-600",
     },
   ];
 

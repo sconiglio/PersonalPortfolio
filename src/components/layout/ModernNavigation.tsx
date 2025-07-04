@@ -16,7 +16,6 @@ const defaultSections = [
   { id: "skills", label: "Skills", href: "#skills" },
   { id: "timeline", label: "Timeline", href: "#timeline" },
   { id: "projects", label: "Projects", href: "#projects" },
-  { id: "testimonials", label: "Testimonials", href: "#testimonials" },
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
@@ -150,7 +149,7 @@ export function ModernNavigation({
                   <AlertCircle className="h-2 w-2" />
                 </div>
                 <span className="font-semibold whitespace-nowrap">
-                  Open to AI PM/APM roles!
+                  Open to PM roles!
                 </span>
               </button>
             </motion.div>
