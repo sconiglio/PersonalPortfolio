@@ -1,4 +1,4 @@
-# 🚀 Professional Portfolio Template
+# 🚀 Modern Portfolio Template
 
 A sophisticated, modern portfolio website template featuring advanced AI integrations, interactive tours, beautiful animations, and comprehensive analytics. Built with cutting-edge technologies and designed to impress recruiters and potential collaborators.
 
@@ -7,36 +7,42 @@ A sophisticated, modern portfolio website template featuring advanced AI integra
 ## ✨ Key Features
 
 ### 🏗️ **Modular Architecture**
+
 - **Clean, Maintainable Code**: Well-organized TypeScript modules with reusable components
 - **Centralized State Management**: Custom hooks managing all application state
 - **Performance Optimized**: React 18 optimizations with smart loading states
 - **Type Safety**: Full TypeScript coverage with strict mode
 
 ### 🤖 **AI-Powered Chatbot**
+
 - **OpenAI GPT Integration**: Intelligent conversations about your background and projects
 - **Smart Contact Intent Detection**: Automatically processes contact requests from natural conversation
 - **Multi-Channel Contact**: Email, calendar scheduling, and direct messaging
 - **Mobile-Optimized Interface**: Professional dark theme for mobile devices
 
 ### 🎯 **Interactive Tour System**
+
 - **Guided Portfolio Tour**: Walks visitors through your key skills and projects
 - **Advanced Analytics**: Tracks tour interactions, completion rates, and user engagement
 - **Mobile Responsive**: Optimized positioning and animations for all devices
 - **Customizable Steps**: Easy to modify tour content and targeting
 
 ### 📊 **Comprehensive Analytics Dashboard**
+
 - **Real-time Visitor Tracking**: Page views, session duration, geographic data
 - **Interaction Analytics**: Button clicks, chatbot conversations, tour engagement
 - **Visual Charts**: Daily graphs with hourly breakdowns using Recharts
 - **Password Protected**: Secure access to your analytics data
 
 ### 🎨 **Professional Design**
+
 - **Modern Dark/Light Theme**: Automatic theme switching with manual override
 - **Smooth Animations**: Framer Motion animations throughout the interface
 - **Responsive Design**: Perfect on desktop, tablet, and mobile devices
 - **Customizable Color Schemes**: Easy to modify brand colors and gradients
 
 ### 🛠️ **Developer-Friendly**
+
 - **Easy Customization**: Well-documented code with clear TODO comments
 - **Environment Configuration**: Secure API key management
 - **One-Click Deploy**: Ready for Vercel, Netlify, and other platforms
@@ -137,15 +143,18 @@ Open [http://localhost:3000](http://localhost:3000) to see your portfolio templa
 **Update these key files with your information:**
 
 #### `src/app/layout.tsx`
+
 - Replace `YOUR_NAME`, `YOUR_TITLE`, `YOUR_DOMAIN` with your details
 - Update metadata, Open Graph images, and social links
 
 #### `src/components/sections/HeroSection.tsx`
+
 - Replace `YOUR_FIRST_NAME`, `YOUR_LAST_NAME`, `YOUR_TITLE`
 - Update `YOUR_EDUCATION`, `YOUR_EXPERTISE`, `YOUR_COMPANY_ROLE`
 - Replace `YOUR_LINKEDIN_URL`, `YOUR_COMPANY_URL`
 
 #### `src/components/sections/AboutSection.tsx`
+
 - Replace the entire story section with your professional journey
 - Update `YOUR_DEGREE`, `YOUR_UNIVERSITY`, `YOUR_ROLE`, `YOUR_COMPANY`
 - Customize your skills formula and personal interests
@@ -153,6 +162,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your portfolio templa
 ### 2. Skills & Experience
 
 #### `src/components/sections/SkillsSection.tsx`
+
 Replace the `skillsData` object with your own skills:
 
 ```typescript
@@ -175,10 +185,12 @@ const skillsData: Record<string, Skill[]> = {
 ```
 
 #### `src/components/sections/TimelineSection.tsx`
+
 - Replace education and work experience with your background
 - Update company logos, dates, and descriptions
 
 #### `src/components/sections/ProjectsSection.tsx`
+
 - Showcase your projects with descriptions, tech stacks, and links
 - Replace project images and achievements
 
@@ -193,6 +205,7 @@ const skillsData: Record<string, Skill[]> = {
 - `logos/` - Replace with your company/project logos
 
 **Image Optimization Tips:**
+
 - Use WebP format for better performance
 - Keep images under 500KB
 - Use appropriate alt text for accessibility
@@ -200,6 +213,7 @@ const skillsData: Record<string, Skill[]> = {
 ### 4. Contact Information
 
 #### Update Contact Methods:
+
 - Email addresses in environment variables
 - Social media links in HeroSection and ContactSection
 - Phone number (if desired) in ContactSection
@@ -208,6 +222,7 @@ const skillsData: Record<string, Skill[]> = {
 ### 5. Colors & Branding
 
 #### `tailwind.config.ts`
+
 Customize your brand colors:
 
 ```typescript
@@ -217,17 +232,18 @@ module.exports = {
       colors: {
         // Add your brand colors
         brand: {
-          50: '#your-light-color',
-          500: '#your-main-color',
-          900: '#your-dark-color',
-        }
-      }
-    }
-  }
-}
+          50: "#your-light-color",
+          500: "#your-main-color",
+          900: "#your-dark-color",
+        },
+      },
+    },
+  },
+};
 ```
 
 #### CSS Variables in `src/app/globals.css`
+
 Update gradient and theme colors throughout the site.
 
 ## 🔧 Advanced Configuration
@@ -277,10 +293,11 @@ Update gradient and theme colors throughout the site.
 ### Vercel (Recommended)
 
 1. **Connect Repository**
+
    ```bash
    # Install Vercel CLI
    npm i -g vercel
-   
+
    # Deploy
    vercel --prod
    ```
@@ -296,6 +313,7 @@ Update gradient and theme colors throughout the site.
 ### Other Platforms
 
 #### Netlify
+
 ```bash
 # Build command
 npm run build
@@ -305,6 +323,7 @@ out
 ```
 
 #### Railway/Render
+
 - Configure environment variables in platform dashboard
 - Set build command to `npm run build`
 - Set start command to `npm start`
@@ -314,6 +333,7 @@ out
 Access your analytics at `https://yourdomain.com/analytics`
 
 **Features:**
+
 - **Daily Visitor Graphs**: Visual representation of site traffic
 - **Geographic Data**: See where your visitors are coming from
 - **Interaction Tracking**: Monitor button clicks, tour engagement
@@ -345,6 +365,7 @@ const tourSteps: TourStep[] = [
 ### Targeting Elements
 
 Each tour step targets specific elements on your page:
+
 - Use `targetSection` to point to section IDs
 - Customize `position` for optimal arrow placement
 - Adjust `duration` for step timing
@@ -370,6 +391,7 @@ Each tour step targets specific elements on your page:
 ### Common Issues
 
 **Build Errors:**
+
 ```bash
 # Clear Next.js cache
 rm -rf .next
@@ -377,16 +399,19 @@ npm run build
 ```
 
 **Environment Variables Not Loading:**
+
 - Ensure `.env.local` is in the correct directory
 - Check variable names match exactly
 - Restart development server after changes
 
 **Firebase Connection Issues:**
+
 - Verify project ID and configuration
 - Check Firestore rules allow read/write
 - Ensure API keys are valid
 
 **Email Not Sending:**
+
 - Verify Resend API key
 - Check domain verification status
 - Review email template formatting
@@ -460,7 +485,7 @@ This project is licensed under the MIT License - feel free to use it for your pe
 
 ## 📞 Support
 
-Need help setting up your portfolio? 
+Need help setting up your portfolio?
 
 - **Documentation**: Check this README and inline comments
 - **Issues**: Report bugs or request features via GitHub Issues
@@ -469,8 +494,9 @@ Need help setting up your portfolio?
 ---
 
 **Built with ❤️ using:**
+
 - Next.js 14 & React 18
-- TypeScript & TailwindCSS  
+- TypeScript & TailwindCSS
 - Framer Motion & Recharts
 - OpenAI API & Firebase
 - Resend & Google APIs

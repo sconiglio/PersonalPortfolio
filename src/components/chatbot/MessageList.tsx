@@ -99,8 +99,8 @@ export function MessageList({
                   {message.role === "user"
                     ? "You"
                     : isLoveMode
-                      ? "Lawrence's Love Bot 💕"
-                      : "Lawrence's AI"}
+                      ? "YOUR_NAME's Love Bot 💕"
+                      : "YOUR_NAME's AI"}
                 </span>
               </div>
 
@@ -213,7 +213,7 @@ export function MessageList({
                         : "text-purple-600 dark:text-purple-400"
                     }`}
                   >
-                    {isLoveMode ? "Lawrence's Love Bot 💕" : "Lawrence's AI"}
+                    {isLoveMode ? "YOUR_NAME's Love Bot 💕" : "YOUR_NAME's AI"}
                   </span>
                 </div>
 

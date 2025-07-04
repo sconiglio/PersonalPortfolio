@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email using Resend
-    const emailDestination = process.env.EMAIL_NAME || "lawrencehua2@gmail.com";
+    const emailDestination = process.env.EMAIL_NAME || "your.email@example.com";
     const { data, error } = await resend.emails.send({
       from: `Lawrence Hua Portfolio <${process.env.FROM_EMAIL || "noreply@lawrencehua.com"}>`,
       to: [emailDestination],
@@ -83,9 +83,9 @@ export async function POST(request: NextRequest) {
     if (email) {
       try {
         const { data: userData, error: userError } = await resend.emails.send({
-          from: `Lawrence Hua Portfolio <${process.env.FROM_EMAIL || "noreply@lawrencehua.com"}>`,
+          from: `YOUR_NAME Portfolio <${process.env.FROM_EMAIL || "noreply@yourdomain.com"}>`,
           to: [email],
-          subject: `✅ Message Sent Successfully - Lawrence Hua`,
+          subject: `✅ Message Sent Successfully - YOUR_NAME`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
               <h2 style="color: #10b981;">✅ Your Message Has Been Sent!</h2>
@@ -112,16 +112,16 @@ export async function POST(request: NextRequest) {
                 <h3 style="margin-top: 0; color: #1e40af;">📞 What Happens Next?</h3>
                 <ul style="margin: 10px 0; padding-left: 20px;">
                   <li>I'll send a personalized response within 24-48 hours</li>
-                  <li>In the meantime, feel free to explore more about my work at <a href="https://www.lawrencehua.com" style="color: #2563eb;">www.lawrencehua.com</a></li>
+                  <li>In the meantime, feel free to explore more about my work at <a href="YOUR_WEBSITE_URL" style="color: #2563eb;">YOUR_WEBSITE_URL</a></li>
                 </ul>
                 
-                <p style="color: #334155; font-size: 16px;">Best regards,<br><strong>Lawrence Hua</strong></p>
+                <p style="color: #334155; font-size: 16px;">Best regards,<br><strong>YOUR_NAME</strong></p>
                 
                 <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-                  📧 ${process.env.EMAIL_NAME || "lawrencehua2@gmail.com"}<br>
-                  🔗 <a href="https://www.lawrencehua.com" style="color: #2563eb;">www.lawrencehua.com</a><br>
+                          📧 ${process.env.EMAIL_NAME || "your.email@example.com"}<br>
+        🔗 <a href="YOUR_WEBSITE_URL" style="color: #2563eb;">YOUR_WEBSITE_URL</a><br>
                   🎯 AI Product Manager | Full-Stack Developer | Startup Founder<br><br>
-                  <em>I'm passionate about leveraging AI and data to solve real-world problems. Visit <a href="https://www.lawrencehua.com" style="color: #2563eb;">my website</a> to find out more information about my background, projects, and experience.</em>
+                  <em>I'm passionate about leveraging AI and data to solve real-world problems. Visit <a href="YOUR_WEBSITE_URL" style="color: #2563eb;">my website</a> to find out more information about my background, projects, and experience.</em>
                 </p>
               </div>
             </div>

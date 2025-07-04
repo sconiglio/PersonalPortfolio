@@ -68,7 +68,7 @@ export function AboutSection() {
           <h2 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
             About{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Lawrence
+              YOUR_NAME
             </span>
           </h2>
           <div className="mx-auto h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />

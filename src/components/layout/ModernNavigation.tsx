@@ -119,7 +119,7 @@ export function ModernNavigation({
               onClick={() => scrollToSection("#hero")}
               className="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
             >
-              Lawrence
+              YOUR_NAME
               <span className="text-blue-600 dark:text-blue-400">.</span>
             </button>
 

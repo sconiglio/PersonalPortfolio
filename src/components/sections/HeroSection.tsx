@@ -236,7 +236,7 @@ export function HeroSection({
           >
             <Image
               src="/profile.jpg"
-              alt="Lawrence Hua"
+              alt="YOUR_NAME"
               fill
               className="object-cover transition-all duration-300 group-hover:brightness-110"
               priority
@@ -285,9 +285,9 @@ export function HeroSection({
             className="mb-2 sm:mb-4 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => onCatsToggle?.(!showCats)}
           >
-            Lawrence W.{" "}
+            YOUR_FIRST_NAME YOUR_LAST_NAME{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Hua
+              YOUR_LAST_NAME
             </span>
           </h1>
           <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-blue-200">
@@ -391,7 +391,9 @@ export function HeroSection({
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-blue-700 hover:to-blue-800 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-            onClick={() => trackButtonClick?.("download_resume", "Download Resume")}
+            onClick={() =>
+              trackButtonClick?.("download_resume", "Download Resume")
+            }
           >
             <FiFileText className="mr-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:scale-110" />
             Download Resume
@@ -411,7 +413,7 @@ export function HeroSection({
           </motion.button>
 
           <Link
-            href="https://www.linkedin.com/in/lawrencehua"
+            href="YOUR_LINKEDIN_URL"
             target="_blank"
             className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-[#0077B5] to-[#006399] px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
             onClick={() => trackButtonClick?.("linkedin_profile", "LinkedIn")}

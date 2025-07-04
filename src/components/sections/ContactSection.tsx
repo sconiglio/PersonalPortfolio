@@ -556,11 +556,11 @@ export function ContactSection({
                       <span className="text-3xl">🎯</span>
                     </motion.div>
                     <h3 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
-                      Finish the Tour to Contact Lawrence!
+                      Finish the Tour to Contact YOUR_NAME!
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300 mb-6">
                       Complete the PM experience to unlock full contact options
-                      and connect with Lawrence directly.
+                      and connect with YOUR_NAME directly.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                       <div className="flex items-center gap-2 text-sm text-purple-600 dark:text-purple-400">

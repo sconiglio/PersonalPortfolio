@@ -84,7 +84,7 @@ interface TourStep {
 const tourSteps: TourStep[] = [
   {
     id: "intro",
-    title: "👋 Welcome! I'm Lawrence Hua.",
+    title: "👋 Welcome! I'm YOUR_NAME.",
     content:
       "A Product Manager with a passion for building innovative, user-centric AI products. Let's take a quick tour of my work.",
     targetSection: "hero",

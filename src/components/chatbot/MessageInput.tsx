@@ -136,7 +136,7 @@ export function MessageInput({
               }
             }}
             placeholder={
-              isMobile ? "Ask me anything" : "Ask me anything about Lawrence"
+              isMobile ? "Ask me anything" : "Ask me anything about YOUR_NAME"
             }
             className="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500"
             rows={1}
