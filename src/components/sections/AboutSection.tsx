@@ -82,88 +82,31 @@ export function AboutSection() {
 
               <div className="space-y-4 text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
                 <p className="text-lg leading-relaxed">
-                  It all started when I realized that the most impactful
-                  products aren't just about features—they're about
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    {" "}
-                    understanding user needs
-                  </span>{" "}
-                  and translating them into
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    {" "}
-                    meaningful experiences
-                  </span>
-                  .
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
 
                 <p>
-                  With a{" "}
-                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-1 rounded">
-                    Master's in Business Administration
-                  </strong>
-                  , I've <span className="font-semibold">bridged the gap</span>{" "}
-                  between business objectives and user needs. My journey spans
-                  from
-                  <span className="text-gray-600 dark:text-gray-400 font-medium">
-                    {" "}
-                    business strategy foundations
-                  </span>{" "}
-                  to leading{" "}
-                  <span className="text-gray-600 dark:text-gray-400 font-medium">
-                    product teams
-                  </span>
-                  .
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum.
                 </p>
 
                 <p>
-                  As a{" "}
-                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-1 rounded">
-                    Senior Product Manager
-                  </strong>
-                  , I've led product initiatives that improved user engagement
-                  by{" "}
-                  <span className="font-bold text-gray-600 dark:text-gray-400">
-                    up to 25%
-                  </span>{" "}
-                  using{" "}
-                  <span className="font-medium text-gray-600 dark:text-gray-400">
-                    data-driven decisions
-                  </span>{" "}
-                  and{" "}
-                  <span className="font-medium text-gray-600 dark:text-gray-400">
-                    user research
-                  </span>
-                  . This experience taught me that successful products require
-                  both{" "}
-                  <span className="underline decoration-gray-400/50">
-                    strategic thinking
-                  </span>{" "}
-                  and{" "}
-                  <span className="underline decoration-gray-400/50">
-                    deep user empathy
-                  </span>
-                  .
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo.
                 </p>
 
                 <p>
-                  Today, I'm passionate about creating products that don't just{" "}
-                  <span className="text-gray-600 dark:text-gray-400">
-                    meet requirements
-                  </span>
-                  , but{" "}
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    genuinely improve user lives
-                  </span>
-                  . I believe the future belongs to product managers who can
-                  speak both languages—
-                  <span className="font-medium text-gray-600 dark:text-gray-400">
-                    business strategy
-                  </span>{" "}
-                  and{" "}
-                  <span className="font-medium text-gray-600 dark:text-gray-400">
-                    user experience
-                  </span>
-                  .
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                  qui dolorem ipsum quia dolor sit amet.
                 </p>
               </div>
 
