@@ -80,19 +80,19 @@ export function AboutSection() {
           <motion.div variants={itemVariants}>
             <div className="rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-8 shadow-xl">
               <h3 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white text-center">
-                My Journey in AI & Product
+                My Journey in Product Management
               </h3>
 
               <div className="space-y-4 text-slate-700 dark:text-slate-300 max-w-4xl mx-auto">
                 <p className="text-lg leading-relaxed">
-                  It all started when I realized that the most impactful AI
-                  solutions aren't just about the technology—they're about
-                  <span className="font-semibold text-blue-600 dark:text-blue-400">
+                  It all started when I realized that the most impactful
+                  products aren't just about features—they're about
+                  <span className="font-semibold text-gray-600 dark:text-gray-400">
                     {" "}
-                    understanding human needs
+                    understanding user needs
                   </span>{" "}
                   and translating them into
-                  <span className="font-semibold text-purple-600 dark:text-purple-400 underline decoration-purple-400/50">
+                  <span className="font-semibold text-gray-600 dark:text-gray-400 underline decoration-gray-400/50">
                     {" "}
                     meaningful experiences
                   </span>
@@ -101,71 +101,70 @@ export function AboutSection() {
 
                 <p>
                   With a{" "}
-                  <strong className="text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-1 rounded">
-                    Master's in Information Systems Management from Carnegie
-                    Mellon
+                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900/20 px-1 rounded">
+                    Master's in Business Administration
                   </strong>
                   , I've <span className="font-semibold">bridged the gap</span>{" "}
-                  between technical AI capabilities and real-world product
-                  applications. My journey spans from
-                  <span className="text-orange-600 dark:text-orange-400 font-medium">
+                  between business objectives and user needs. My journey spans
+                  from
+                  <span className="text-gray-600 dark:text-gray-400 font-medium">
                     {" "}
-                    software engineering foundations
+                    business strategy foundations
                   </span>{" "}
-                  to founding{" "}
-                  <span className="text-green-600 dark:text-green-400 font-medium">
-                    AI-driven startups
+                  to leading{" "}
+                  <span className="text-gray-600 dark:text-gray-400 font-medium">
+                    product teams
                   </span>
                   .
                 </p>
 
                 <p>
-                  As the{" "}
-                  <strong className="text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20 px-1 rounded">
-                    Founder & CEO of Expired Solutions
+                  As a{" "}
+                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900/20 px-1 rounded">
+                    Senior Product Manager
                   </strong>
-                  , I built an AI platform that reduces grocery waste by{" "}
-                  <span className="font-bold text-green-600 dark:text-green-400">
-                    up to 20%
+                  , I've led product initiatives that improved user engagement
+                  by{" "}
+                  <span className="font-bold text-gray-600 dark:text-gray-400">
+                    up to 25%
                   </span>{" "}
                   using{" "}
-                  <span className="font-medium text-blue-600 dark:text-blue-400">
-                    computer vision
+                  <span className="font-medium text-gray-600 dark:text-gray-400">
+                    data-driven decisions
                   </span>{" "}
                   and{" "}
-                  <span className="font-medium text-purple-600 dark:text-purple-400">
-                    GPT
+                  <span className="font-medium text-gray-600 dark:text-gray-400">
+                    user research
                   </span>
-                  . This experience taught me that successful AI products
-                  require both{" "}
-                  <span className="underline decoration-blue-400/50">
-                    technical excellence
+                  . This experience taught me that successful products require
+                  both{" "}
+                  <span className="underline decoration-gray-400/50">
+                    strategic thinking
                   </span>{" "}
                   and{" "}
-                  <span className="underline decoration-purple-400/50">
+                  <span className="underline decoration-gray-400/50">
                     deep user empathy
                   </span>
                   .
                 </p>
 
                 <p>
-                  Today, I'm passionate about creating AI solutions that don't
-                  just{" "}
-                  <span className="text-orange-600 dark:text-orange-400">
-                    automate processes
+                  Today, I'm passionate about creating products that don't just{" "}
+                  <span className="text-gray-600 dark:text-gray-400">
+                    meet requirements
                   </span>
                   , but{" "}
-                  <span className="font-semibold text-green-600 dark:text-green-400">
-                    genuinely improve lives
+                  <span className="font-semibold text-gray-600 dark:text-gray-400">
+                    genuinely improve user lives
                   </span>
                   . I believe the future belongs to product managers who can
                   speak both languages—
-                  <span className="font-medium text-blue-600 dark:text-blue-400">
-                    technical AI
+                  <span className="font-medium text-gray-600 dark:text-gray-400">
+                    business strategy
                   </span>{" "}
                   and{" "}
-                  <span className="font-medium text-purple-600 dark:text-purple-400">
-                    human experience
+                  <span className="font-medium text-gray-600 dark:text-gray-400">
+                    user experience
                   </span>
                   .
                 </p>
@@ -179,72 +178,63 @@ export function AboutSection() {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
-                  {/* AI Expertise */}
+                  {/* Product Strategy */}
                   <motion.div
                     className="flex flex-col items-center group"
                     whileHover={{ scale: 1.1, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-blue-200/50 dark:border-blue-700/50 group-hover:border-blue-300 dark:group-hover:border-blue-600">
-                      <Image
-                        src="/logos/AI_expertise_icon_white.png"
-                        alt="AI Expertise"
-                        fill
-                        className="object-contain group-hover:scale-110 transition-all duration-200"
-                      />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                      <div className="w-full h-full flex items-center justify-center text-2xl">
+                        🎯
+                      </div>
                     </div>
                     <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
-                      AI Expertise
+                      Product Strategy
                     </span>
                   </motion.div>
 
-                  <span className="text-blue-600 dark:text-blue-400 font-bold text-xl">
+                  <span className="text-gray-600 dark:text-gray-400 font-bold text-xl">
                     +
                   </span>
 
-                  {/* Data Strategy */}
+                  {/* User Research */}
                   <motion.div
                     className="flex flex-col items-center group"
                     whileHover={{ scale: 1.1, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-purple-200/50 dark:border-purple-700/50 group-hover:border-purple-300 dark:group-hover:border-purple-600">
-                      <Image
-                        src="/logos/data_strategy_icon_white.png"
-                        alt="Data Strategy"
-                        fill
-                        className="object-contain group-hover:scale-110 transition-all duration-200"
-                      />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                      <div className="w-full h-full flex items-center justify-center text-2xl">
+                        🔍
+                      </div>
                     </div>
                     <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
-                      Data Strategy
+                      User Research
                     </span>
                   </motion.div>
 
-                  <span className="text-purple-600 dark:text-purple-400 font-bold text-xl">
+                  <span className="text-gray-600 dark:text-gray-400 font-bold text-xl">
                     +
                   </span>
 
-                  {/* Human Insight */}
+                  {/* Data Analysis */}
                   <motion.div
                     className="flex flex-col items-center group"
                     whileHover={{ scale: 1.1, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-green-200/50 dark:border-green-700/50 group-hover:border-green-300 dark:group-hover:border-green-600">
-                      <Image
-                        src="/logos/human_insight_icon_white.png"
-                        alt="Human Insight"
-                        fill
-                        className="object-contain group-hover:scale-110 transition-all duration-200"
-                      />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                      <div className="w-full h-full flex items-center justify-center text-2xl">
+                        📊
+                      </div>
                     </div>
                     <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
-                      Human Insight
+                      Data Analysis
                     </span>
                   </motion.div>
 
-                  <span className="text-green-600 dark:text-green-400 font-bold text-2xl">
+                  <span className="text-gray-600 dark:text-gray-400 font-bold text-2xl">
                     =
                   </span>
 
@@ -254,16 +244,13 @@ export function AboutSection() {
                     whileHover={{ scale: 1.15, y: -3 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 mb-2 relative rounded-full bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-900/20 dark:to-orange-800/20 p-5 sm:p-6 shadow-xl group-hover:shadow-2xl transition-all duration-200 border border-yellow-200/50 dark:border-yellow-700/50 group-hover:border-yellow-300 dark:group-hover:border-yellow-600">
-                      <Image
-                        src="/logos/Product_Leader_Icon_white.png"
-                        alt="Innovative Product Leader"
-                        fill
-                        className="object-contain group-hover:scale-110 transition-all duration-200"
-                      />
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-5 sm:p-6 shadow-xl group-hover:shadow-2xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                      <div className="w-full h-full flex items-center justify-center text-3xl">
+                        🚀
+                      </div>
                     </div>
-                    <span className="text-sm font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text whitespace-nowrap">
-                      Innovative Product Leader
+                    <span className="text-sm font-bold text-transparent bg-gradient-to-r from-gray-600 to-gray-700 bg-clip-text whitespace-nowrap">
+                      Successful Product Manager
                     </span>
                   </motion.div>
                 </div>

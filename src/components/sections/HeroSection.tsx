@@ -286,12 +286,12 @@ export function HeroSection({
             onClick={() => onCatsToggle?.(!showCats)}
           >
             YOUR_FIRST_NAME YOUR_LAST_NAME{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">
               YOUR_LAST_NAME
             </span>
           </h1>
-          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-blue-200">
-            AI Product Manager
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-200">
+            Product Manager
           </div>
         </motion.div>
 
@@ -307,7 +307,7 @@ export function HeroSection({
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-center px-2"
             >
-              Building human-centered AI solutions that transform ideas into
+              Building human-centered products that transform ideas into
             </motion.div>
 
             {/* Dynamic Animated Text Gallery */}
@@ -358,7 +358,7 @@ export function HeroSection({
             className="flex items-center space-x-1 sm:space-x-2 rounded-full bg-white/5 px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
             <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-green-400" />
-            <span className="whitespace-nowrap">Carnegie Mellon MISM '24</span>
+            <span className="whitespace-nowrap">Business Degree</span>
           </button>
           <button
             onClick={() => {
@@ -368,7 +368,9 @@ export function HeroSection({
             className="flex items-center space-x-1 sm:space-x-2 rounded-full bg-white/5 px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
             <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-blue-400" />
-            <span className="whitespace-nowrap">AI/ML Product Experience</span>
+            <span className="whitespace-nowrap">
+              Product Management Experience
+            </span>
           </button>
           <Link
             href="https://www.expiredsolutions.com"
@@ -377,7 +379,7 @@ export function HeroSection({
             className="flex items-center space-x-1 sm:space-x-2 rounded-full bg-white/5 px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
             <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-purple-400" />
-            <span className="whitespace-nowrap">Startup Founder</span>
+            <span className="whitespace-nowrap">Product Leader</span>
           </Link>
         </motion.div>
 
@@ -390,7 +392,7 @@ export function HeroSection({
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-blue-700 hover:to-blue-800 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-gray-600 to-gray-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-gray-700 hover:to-gray-800 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25"
             onClick={() =>
               trackButtonClick?.("download_resume", "Download Resume")
             }
@@ -406,7 +408,7 @@ export function HeroSection({
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-purple-700 hover:to-purple-800 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-gray-600 to-gray-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-gray-700 hover:to-gray-800 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25"
           >
             <span className="mr-2 text-lg">🎯</span>
             Take Product Tour
@@ -442,9 +444,9 @@ export function HeroSection({
             }}
             whileHover={!isMobile ? { scale: 1.02 } : {}}
             whileTap={{ scale: 0.98 }}
-            className="w-full max-w-lg rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg lg:text-xl font-bold text-white shadow-xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25"
+            className="w-full max-w-lg rounded-xl bg-gradient-to-r from-gray-600 via-gray-700 to-gray-600 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg lg:text-xl font-bold text-white shadow-xl transition-all duration-300 hover:shadow-2xl hover:shadow-gray-500/25"
           >
-            🚀 Looking for an AI Product Manager?
+            🚀 Looking for a Product Manager?
             <br />
             Let's Connect!
           </motion.button>
