@@ -278,7 +278,7 @@ export function HeroSection({
             className="mb-2 sm:mb-4 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => onCatsToggle?.(!showCats)}
           >
-            YOUR_FIRST_NAME YOUR_LAST_NAME{" "}
+            YOUR_FIRST_NAME{" "}
             <span className="bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">
               YOUR_LAST_NAME
             </span>
