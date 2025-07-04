@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const profileImage = await fetch(
       new URL(
-        "../../../public/images/placeholders/profilepic.jpeg",
+        "../../../public/images/logos/pm_happy_hour_logo.jpeg",
         import.meta.url
       )
     ).then((res) => res.arrayBuffer());

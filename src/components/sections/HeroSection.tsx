@@ -225,7 +225,7 @@ export function HeroSection({
             whileTap={{ scale: 0.95 }}
           >
             <Image
-              src="/profile.jpg"
+              src="/images/logos/pm_happy_hour_logo.jpeg"
               alt="YOUR_NAME"
               fill
               className="object-cover transition-all duration-300 group-hover:brightness-110"

@@ -26,7 +26,7 @@ const timelineData: TimelineEvent[] = [
     title: "Master's degree, Business Administration",
     org: "University Name",
     date: "Aug 2023 - Dec 2024",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     details: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Relevant Coursework: Product Management, Business Strategy, Data Analytics",
@@ -39,7 +39,7 @@ const timelineData: TimelineEvent[] = [
     title: "Bachelor's degree, Business Administration",
     org: "University Name",
     date: "Aug 2017 - May 2021",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     details: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Relevant Coursework: Marketing, Finance, Operations Management, Business Analytics",
@@ -52,7 +52,7 @@ const timelineData: TimelineEvent[] = [
     title: "High School Diploma",
     org: "High School Name",
     date: "Aug 2013 - May 2017",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     details: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Leadership activities and community service",
@@ -66,7 +66,7 @@ const timelineData: TimelineEvent[] = [
     title: "Senior Product Manager",
     org: "Company Name · Full-time",
     date: "Jan 2025 - Present",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "product",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -81,7 +81,7 @@ const timelineData: TimelineEvent[] = [
     title: "Product Manager",
     org: "Company Name · Full-time",
     date: "Mar 2024 - Dec 2024",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "product",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -95,7 +95,7 @@ const timelineData: TimelineEvent[] = [
     title: "Product Manager Intern",
     org: "Company Name · Internship",
     date: "Jun 2024 - Aug 2024",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "product",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -109,7 +109,7 @@ const timelineData: TimelineEvent[] = [
     title: "Associate Product Manager",
     org: "Company Name · Full-time",
     date: "Jan 2023 - Dec 2023",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "product",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -123,7 +123,7 @@ const timelineData: TimelineEvent[] = [
     title: "Product Analyst",
     org: "Company Name · Full-time",
     date: "Jan 2022 - Dec 2022",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "product",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -137,7 +137,7 @@ const timelineData: TimelineEvent[] = [
     title: "Business Analyst",
     org: "Company Name · Full-time",
     date: "Jan 2021 - Dec 2021",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "product",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -151,7 +151,7 @@ const timelineData: TimelineEvent[] = [
     title: "Marketing Intern",
     org: "Company Name · Internship",
     date: "Jun 2020 - Aug 2020",
-    logo: "/images/placeholders/profile.jpg",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
     category: "marketing",
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

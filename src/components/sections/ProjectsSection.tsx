@@ -26,7 +26,7 @@ const projectsData = {
       title: "Product Launch Strategy",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Product Management", "Strategy", "Launch", "Market Research"],
       link: "#",
       linkText: "View Project",
@@ -43,7 +43,7 @@ const projectsData = {
       title: "User Experience Redesign",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["UX Design", "Product Management", "User Research", "Design"],
       link: "#",
       linkText: "View Project",
@@ -53,7 +53,7 @@ const projectsData = {
       title: "Business Process Optimization",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: [
         "Process Improvement",
         "Automation",
@@ -68,7 +68,7 @@ const projectsData = {
       title: "Analytics Dashboard",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: [
         "Analytics",
         "Dashboard",
@@ -90,7 +90,7 @@ const projectsData = {
       title: "Mobile App Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Mobile", "App Development", "Product Management", "Launch"],
       link: "#",
       linkText: "View Project",
@@ -100,7 +100,7 @@ const projectsData = {
       title: "Market Analysis Report",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Market Research", "Analysis", "Strategy", "Data Science"],
       link: "#",
       linkText: "View Report",
@@ -110,7 +110,7 @@ const projectsData = {
       title: "Team Leadership Project",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Leadership", "Team Management", "Project Management", "Strategy"],
       link: "#",
       linkText: "View Project",
@@ -120,7 +120,7 @@ const projectsData = {
       title: "Customer Research Study",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Research", "Customer Insights", "User Research", "Analysis"],
       link: "#",
       linkText: "View Study",
@@ -130,7 +130,7 @@ const projectsData = {
       title: "Product Strategy Framework",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Strategy", "Framework", "Product Management", "Planning"],
       link: "#",
       linkText: "View Framework",
@@ -140,7 +140,7 @@ const projectsData = {
       title: "Data Analysis Project",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Data Analysis", "Analytics", "Insights", "Reporting"],
       link: "#",
       linkText: "View Analysis",
@@ -150,7 +150,7 @@ const projectsData = {
       title: "Feature Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: [
         "Feature Development",
         "Product Management",
@@ -165,7 +165,7 @@ const projectsData = {
       title: "Competitive Analysis",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Competitive Analysis", "Market Research", "Strategy", "Research"],
       link: "#",
       linkText: "View Analysis",
@@ -175,7 +175,7 @@ const projectsData = {
       title: "User Journey Mapping",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["User Journey", "UX Design", "Mapping", "User Research"],
       link: "#",
       linkText: "View Journey",
@@ -185,7 +185,7 @@ const projectsData = {
       title: "Product Roadmap",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Roadmap", "Product Planning", "Strategy", "Timeline"],
       link: "#",
       linkText: "View Roadmap",
@@ -195,7 +195,7 @@ const projectsData = {
       title: "Portfolio Website",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/images/placeholders/profile.jpg",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Next.js", "React", "TailwindCSS", "TypeScript"],
       link: "https://github.com/LawrenceHua/LawrenceHua.io",
       linkText: "View Source",
@@ -205,7 +205,7 @@ const projectsData = {
       title: "Market Research Analysis",
       description:
         "Conducted comprehensive market research for a new product launch, analyzing competitor landscape and identifying market opportunities that informed strategic decisions.",
-      image: "/logos/project_logo.png",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Market Research", "Competitive Analysis", "Strategy", "Business"],
       link: "https://example.com",
       linkText: "View Analysis",
@@ -215,7 +215,7 @@ const projectsData = {
       title: "User Experience Optimization",
       description:
         "Led user experience improvements for a web application, resulting in 40% increase in user satisfaction scores and reduced support tickets by 30%.",
-      image: "/logos/project_logo.png",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["UX Design", "User Research", "Web Application", "Optimization"],
       link: "https://example.com",
       linkText: "View Project",
@@ -225,7 +225,7 @@ const projectsData = {
       title: "Product Strategy Development",
       description:
         "Developed comprehensive product strategy for a new market segment, including roadmap planning, feature prioritization, and go-to-market strategy.",
-      image: "/logos/project_logo.png",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
       tags: ["Product Strategy", "Roadmap", "Go-to-Market", "Planning"],
       link: "https://example.com",
       linkText: "View Strategy",
