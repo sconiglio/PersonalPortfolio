@@ -8,6 +8,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// 🎯 CUSTOMIZATION: Update these values with your information
+// Replace all instances of YOUR_NAME, YOUR_TITLE, YOUR_DOMAIN, etc.
 export const metadata: Metadata = {
   metadataBase: new URL("https://YOUR_DOMAIN.com"),
   title: "YOUR_NAME - YOUR_TITLE",

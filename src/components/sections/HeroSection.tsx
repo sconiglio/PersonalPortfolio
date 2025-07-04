@@ -7,6 +7,9 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { FiFileText, FiMessageCircle, FiArrowDown } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
 
+// 🎯 CUSTOMIZATION: Update your personal information here
+// Change the profile image, name, title, and description
+
 interface HeroSectionProps {
   onStartTour?: () => void;
   tourActive?: boolean;

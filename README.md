@@ -1,646 +1,244 @@
-# 🚀 Modern Portfolio Template
+# Modern Portfolio Template
 
-A sophisticated, modern portfolio website template featuring advanced AI integrations, interactive tours, beautiful animations, and comprehensive analytics. Built with cutting-edge technologies and designed to impress recruiters and potential collaborators.
+A clean, professional portfolio template built with Next.js, React, and Tailwind CSS. Perfect for product managers, developers, designers, and anyone looking to showcase their work with a modern, minimalist design.
 
-**Perfect for**: Product Managers, Software Engineers, Data Scientists, Designers, and other tech professionals looking to showcase their work with a modern, AI-powered portfolio.
+## ✨ Features
 
-## ✨ Key Features
+- **Modern Design**: Clean, professional layout with black, white, and gray color scheme
+- **Responsive**: Mobile-first design that works on all devices
+- **Fast**: Built with Next.js 14 for optimal performance
+- **Customizable**: Easy to modify content, colors, and sections
+- **SEO Optimized**: Built-in meta tags and Open Graph support
+- **Analytics Ready**: Optional analytics dashboard included
+- **Chatbot**: Optional AI-powered contact form
 
-### 🏗️ **Modular Architecture**
+## 🚀 Quick Start
 
-- **Clean, Maintainable Code**: Well-organized TypeScript modules with reusable components
-- **Centralized State Management**: Custom hooks managing all application state
-- **Performance Optimized**: React 18 optimizations with smart loading states
-- **Type Safety**: Full TypeScript coverage with strict mode
-
-### 🤖 **AI-Powered Chatbot**
-
-- **OpenAI GPT Integration**: Intelligent conversations about your background and projects
-- **Smart Contact Intent Detection**: Automatically processes contact requests from natural conversation
-- **Multi-Channel Contact**: Email, calendar scheduling, and direct messaging
-- **Mobile-Optimized Interface**: Professional dark theme for mobile devices
-
-### 🎯 **Interactive Tour System**
-
-- **Guided Portfolio Tour**: Walks visitors through your key skills and projects
-- **Advanced Analytics**: Tracks tour interactions, completion rates, and user engagement
-- **Mobile Responsive**: Optimized positioning and animations for all devices
-- **Customizable Steps**: Easy to modify tour content and targeting
-
-### 📊 **Comprehensive Analytics Dashboard**
-
-- **Real-time Visitor Tracking**: Page views, session duration, geographic data
-- **Interaction Analytics**: Button clicks, chatbot conversations, tour engagement
-- **Visual Charts**: Daily graphs with hourly breakdowns using Recharts
-- **Password Protected**: Secure access to your analytics data
-
-### 🎨 **Professional Design**
-
-- **Modern Dark/Light Theme**: Automatic theme switching with manual override
-- **Smooth Animations**: Framer Motion animations throughout the interface
-- **Responsive Design**: Perfect on desktop, tablet, and mobile devices
-- **Customizable Color Schemes**: Easy to modify brand colors and gradients
-
-### 🛠️ **Developer-Friendly**
-
-- **Easy Customization**: Well-documented code with clear TODO comments
-- **Environment Configuration**: Secure API key management
-- **One-Click Deploy**: Ready for Vercel, Netlify, and other platforms
-- **Version Management**: Automatic versioning with GitHub Actions
-
-## 🚀 Complete Setup Guide
-
-### Prerequisites
-
-- **Node.js 18+** (Latest LTS recommended)
-- **Git** for version control
-- **A code editor** (VS Code recommended)
-- **Basic knowledge** of React/Next.js (helpful but not required)
-
-### Step 1: Get the Template
+### 1. Clone the Template
 
 ```bash
-# Clone this repository
-git clone https://github.com/LawrenceHua/modern-portfolio-template.git
+git clone https://github.com/your-username/modern-portfolio-template.git
 cd modern-portfolio-template
-
-# Or download and extract the ZIP file
-# Then navigate to the extracted folder
 ```
 
-### Step 2: Install Dependencies
+### 2. Install Dependencies
 
 ```bash
-# Install all required packages
 npm install
-
-# Or if you prefer yarn
-yarn install
-
-# Or if you prefer pnpm
-pnpm install
 ```
 
-### Step 3: Set Up Environment Variables
+### 3. Start Development Server
 
 ```bash
-# Copy the environment template
-cp .env.example .env.local
-
-# Edit the .env.local file with your actual values
-# See detailed setup instructions below
+npm run dev
 ```
 
-## 🔧 API Setup Instructions
+Open [http://localhost:3000](http://localhost:3000) to see your portfolio!
 
-### 1. Firebase Setup (Required for Analytics)
+## 🎨 Customization Guide
 
-**Step-by-step guide:**
+### Quick Customization (5 minutes)
 
-1. **Create Firebase Project**
-   - Go to [Firebase Console](https://console.firebase.google.com/)
-   - Click "Create a project" or "Add project"
-   - Enter a project name (e.g., "my-portfolio-analytics")
-   - Choose whether to enable Google Analytics (recommended)
-   - Click "Create project"
+1. **Update Personal Info**: Edit `src/app/layout.tsx` to change your name and title
+2. **Replace Profile Image**: Add your photo to `public/images/placeholders/` and update references
+3. **Update Content**: Edit the section files in `src/components/sections/`
+4. **Deploy**: Push to GitHub and deploy with Vercel
 
-2. **Add Web App**
-   - In your Firebase project, click the web icon (</>)
-   - Register app with a nickname (e.g., "portfolio-website")
-   - Click "Register app"
+### Detailed Customization
 
-3. **Get Configuration**
-   - Copy the configuration object that looks like this:
+#### 1. Personal Information
 
-   ```javascript
-   const firebaseConfig = {
-     apiKey: "AIzaSyC...",
-     authDomain: "your-project.firebaseapp.com",
-     projectId: "your-project",
-     storageBucket: "your-project.appspot.com",
-     messagingSenderId: "123456789",
-     appId: "1:123456789:web:abc123",
-     measurementId: "G-ABC123DEF4",
-   };
-   ```
+- **Name & Title**: `src/app/layout.tsx` (lines 15-16)
+- **Profile Image**: `src/components/sections/HeroSection.tsx` (line 25)
+- **Contact Info**: `src/components/sections/ContactSection.tsx`
 
-4. **Enable Firestore Database**
-   - In Firebase Console, go to "Firestore Database"
-   - Click "Create database"
-   - Choose "Start in test mode" (for development)
-   - Select a location close to your users
-   - Click "Done"
+#### 2. Content Sections
 
-5. **Update Environment Variables**
-   ```env
-   NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyC...
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789
-   NEXT_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abc123
-   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-ABC123DEF4
-   ```
+Each section is in its own file for easy editing:
 
-### 2. Resend Email Setup (Required for Contact Forms)
+- **Hero**: `src/components/sections/HeroSection.tsx`
+- **About**: `src/components/sections/AboutSection.tsx`
+- **Skills**: `src/components/sections/SkillsSection.tsx`
+- **Projects**: `src/components/sections/ProjectsSection.tsx`
+- **Experience**: `src/components/sections/TimelineSection.tsx`
+- **Testimonials**: `src/components/sections/TestimonialsSection.tsx`
+- **Contact**: `src/components/sections/ContactSection.tsx`
 
-**Step-by-step guide:**
+#### 3. Adding/Removing Sections
 
-1. **Create Resend Account**
-   - Go to [Resend](https://resend.com/)
-   - Click "Sign up" and create an account
-   - Verify your email address
+**To Add a New Section:**
 
-2. **Get API Key**
-   - In Resend dashboard, go to "API Keys"
-   - Click "Create API Key"
-   - Give it a name (e.g., "Portfolio Contact Form")
-   - Copy the API key (starts with `re_`)
+1. Create `src/components/sections/NewSection.tsx`
+2. Import and add to `src/app/page.tsx`
+3. Add navigation link in `src/components/layout/Navigation.tsx`
 
-3. **Verify Domain (Recommended for Production)**
-   - Go to "Domains" in Resend dashboard
-   - Click "Add Domain"
-   - Enter your domain (e.g., `yourdomain.com`)
-   - Add the DNS records as instructed
-   - Wait for verification (can take up to 24 hours)
+**To Remove a Section:**
 
-4. **Update Environment Variables**
-   ```env
-   RESEND_API_KEY=re_your_api_key_here
-   YOUR_EMAIL=your.email@example.com
-   ```
+1. Remove from `src/app/page.tsx`
+2. Remove navigation link from `src/components/layout/Navigation.tsx`
 
-### 3. OpenAI API Setup (Optional but Recommended)
+#### 4. Styling
 
-**Step-by-step guide:**
+- **Colors**: Edit `tailwind.config.ts` for theme colors
+- **Global Styles**: Modify `src/app/globals.css`
+- **Component Styles**: Each component has inline Tailwind classes
 
-1. **Create OpenAI Account**
-   - Go to [OpenAI Platform](https://platform.openai.com/)
-   - Click "Sign up" and create an account
-   - Verify your email and phone number
+### AI-Powered Customization
 
-2. **Add Payment Method**
-   - Go to "Billing" in your OpenAI account
-   - Add a credit card or payment method
-   - Set usage limits (recommended: $10-20/month)
+Use these prompts with your AI assistant for fast customization:
 
-3. **Create API Key**
-   - Go to "API Keys" in your OpenAI account
-   - Click "Create new secret key"
-   - Give it a name (e.g., "Portfolio Chatbot")
-   - Copy the API key (starts with `sk-`)
+#### For Content Updates:
 
-4. **Update Environment Variables**
-   ```env
-   OPENAI_API_KEY=sk-your_api_key_here
-   ```
-
-### 4. Google Calendar Setup (Optional)
-
-**Step-by-step guide:**
-
-1. **Create Google Cloud Project**
-   - Go to [Google Cloud Console](https://console.cloud.google.com/)
-   - Click "Select a project" > "New Project"
-   - Enter a project name (e.g., "portfolio-calendar")
-   - Click "Create"
-
-2. **Enable Google Calendar API**
-   - In your project, go to "APIs & Services" > "Library"
-   - Search for "Google Calendar API"
-   - Click on it and click "Enable"
-
-3. **Create OAuth 2.0 Credentials**
-   - Go to "APIs & Services" > "Credentials"
-   - Click "Create Credentials" > "OAuth 2.0 Client IDs"
-   - Choose "Web application"
-   - Add authorized redirect URIs:
-     - `http://localhost:3000/api/auth/callback` (for development)
-     - `https://yourdomain.com/api/auth/callback` (for production)
-   - Click "Create"
-   - Copy the Client ID and Client Secret
-
-4. **Update Environment Variables**
-   ```env
-   GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com
-   GOOGLE_CLIENT_SECRET=your_client_secret
-   GOOGLE_REDIRECT_URI=https://yourdomain.com/api/auth/callback
-   GOOGLE_CALENDAR_ID=your_calendar_id@gmail.com
-   ```
-
-### 5. Analytics Dashboard Password
-
-```env
-NEXT_PUBLIC_SECRET_PASS=your_secure_password_here
+```
+"Update the portfolio content in [SECTION_FILE] to reflect my background as a [YOUR_ROLE] with experience in [YOUR_SKILLS]. Include my projects [PROJECT_NAMES] and education at [SCHOOL_NAMES]."
 ```
 
-### 6. Site Configuration
+#### For Styling Changes:
 
-```env
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
+"Modify the color scheme in [COMPONENT_FILE] to use [COLOR_PALETTE] instead of the current black/white theme."
 ```
 
-## 📝 Customization Guide
+#### For Adding Features:
 
-### 1. Personal Information
-
-**Update these key files with your information:**
-
-#### `src/app/layout.tsx`
-
-Replace all `YOUR_*` placeholders:
-
-```typescript
-export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
-  title: "Your Name - Your Title",
-  description:
-    "Portfolio website showcasing my work in Your Expertise and Your Field",
-  // ... update all other metadata
-};
 ```
-
-#### `src/components/sections/HeroSection.tsx`
-
-Update personal information:
-
-```typescript
-// Replace these placeholders
-const heroData = {
-  firstName: "Your",
-  lastName: "Name",
-  title: "Your Professional Title",
-  education: "Your University",
-  expertise: "Your Expertise",
-  companyRole: "Your Company Role",
-  linkedinUrl: "https://linkedin.com/in/yourprofile",
-  companyUrl: "https://yourcompany.com",
-};
+"Add a new section to showcase [FEATURE_TYPE] in the portfolio. Create the component and integrate it into the main page."
 ```
-
-#### `src/components/sections/AboutSection.tsx`
-
-Replace the entire story section with your professional journey:
-
-```typescript
-const aboutData = {
-  story: "Your professional story here...",
-  degree: "Your Degree",
-  university: "Your University",
-  role: "Your Role",
-  company: "Your Company",
-  // ... update all other fields
-};
-```
-
-### 2. Skills & Experience
-
-#### `src/components/sections/SkillsSection.tsx`
-
-Replace the `skillsData` object with your own skills:
-
-```typescript
-const skillsData: Record<string, Skill[]> = {
-  business: [
-    {
-      name: "Product Management",
-      level: "expert", // "expert", "proficient", or "familiar"
-      category: "business",
-      icon: "🎯",
-      experience: "3+ years",
-      projects: 8,
-      achievement: "Led product strategy for 3 major launches",
-      endorsements: ["Company A", "Manager B", "Client C"],
-    },
-    // Add more skills...
-  ],
-  // Add more categories...
-};
-```
-
-#### `src/components/sections/TimelineSection.tsx`
-
-Replace education and work experience:
-
-```typescript
-const timelineData: TimelineEvent[] = [
-  {
-    type: "education",
-    year: "2024",
-    title: "Your Degree",
-    org: "Your University",
-    date: "Aug 2023 - Dec 2024",
-    logo: "/images/logos/pm_happy_hour_logo.jpeg",
-    details: [
-      "Your educational achievements...",
-      "Relevant coursework...",
-      "Awards and honors...",
-    ],
-  },
-  // Add more education and experience...
-];
-```
-
-#### `src/components/sections/ProjectsSection.tsx`
-
-Showcase your projects:
-
-```typescript
-const projectsData = {
-  all: [
-    {
-      title: "Your Project Name",
-      description: "Detailed description of your project...",
-      image: "/images/logos/pm_happy_hour_logo.jpeg",
-      tags: ["Technology", "Skills", "Used"],
-      link: "https://yourproject.com",
-      linkText: "View Project",
-      linkIcon: "external" as const,
-      featured: true,
-      achievements: [
-        "Key achievement 1",
-        "Key achievement 2",
-        "Key achievement 3",
-      ],
-    },
-    // Add more projects...
-  ],
-};
-```
-
-### 3. Images & Assets
-
-**Replace these files in `public/` directory:**
-
-- `public/images/logos/pm_happy_hour_logo.jpeg` - Replace with your own logo/image
-- `public/resume.pdf` - Your resume file
-- `public/og-image.png` - Social media preview image (1200x630px)
-- `public/favicon.png` - Your website icon
-- `public/apple-touch-icon.png` - Apple device icon
-
-**Image Optimization Tips:**
-
-- Use WebP format for better performance
-- Keep images under 500KB
-- Use appropriate alt text for accessibility
-
-### 4. Tour System Customization
-
-Edit the `tourSteps` array in `src/app/page.tsx`:
-
-```typescript
-const tourSteps: TourStep[] = [
-  {
-    id: "intro",
-    title: "👋 Welcome! I'm Your Name.",
-    content: "Brief introduction to your background and expertise.",
-    targetSection: "hero",
-    icon: <FiUser className="w-5 h-5" />,
-    color: "from-gray-600 to-gray-700",
-    duration: 8000,
-    position: "center",
-  },
-  // Add more steps...
-];
-```
-
-### 5. Colors & Branding
-
-#### `tailwind.config.ts`
-
-Customize your brand colors:
-
-```typescript
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          50: "#your-light-color",
-          500: "#your-main-color",
-          900: "#your-dark-color",
-        },
-      },
-    },
-  },
-};
-```
-
-## 🚀 Deployment Guide
-
-### Vercel (Recommended)
-
-1. **Connect Repository**
-
-   ```bash
-   # Install Vercel CLI
-   npm i -g vercel
-
-   # Deploy
-   vercel --prod
-   ```
-
-2. **Configure Environment Variables**
-   - Go to Vercel Dashboard > Project Settings > Environment Variables
-   - Add all variables from your `.env.local` file
-   - Make sure to set them for Production environment
-
-3. **Custom Domain**
-   - Add your domain in Vercel Dashboard
-   - Update DNS records as instructed
-   - Update `NEXT_PUBLIC_SITE_URL` in environment variables
-
-### Netlify
-
-1. **Connect Repository**
-   - Go to [Netlify](https://netlify.com/)
-   - Click "New site from Git"
-   - Connect your GitHub repository
-
-2. **Configure Build Settings**
-   - Build command: `npm run build`
-   - Publish directory: `out`
-   - Node version: `18` (or latest LTS)
-
-3. **Environment Variables**
-   - Go to Site Settings > Environment Variables
-   - Add all variables from your `.env.local` file
-
-### Railway/Render
-
-1. **Connect Repository**
-   - Go to Railway/Render dashboard
-   - Create new service from Git repository
-
-2. **Configure Environment**
-   - Set build command: `npm run build`
-   - Set start command: `npm start`
-   - Add environment variables in platform dashboard
-
-## 📊 Analytics Dashboard
-
-Access your analytics at `https://yourdomain.com/analytics`
-
-**Features:**
-
-- **Daily Visitor Graphs**: Visual representation of site traffic
-- **Geographic Data**: See where your visitors are coming from
-- **Interaction Tracking**: Monitor button clicks, tour engagement
-- **Chatbot Analytics**: Conversation metrics and popular topics
-- **Performance Metrics**: Page load times and user engagement
-
-## 🔐 Security Best Practices
-
-1. **Environment Variables**
-   - Never commit `.env.local` to version control
-   - Use different API keys for development and production
-   - Regularly rotate API keys
-
-2. **Analytics Protection**
-   - Use strong passwords for analytics dashboard
-   - Consider IP restrictions for sensitive data
-
-3. **Contact Form Security**
-   - Implement rate limiting
-   - Validate all form inputs
-   - Use CAPTCHA for public forms (if needed)
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Build Errors:**
-
-```bash
-# Clear Next.js cache
-rm -rf .next
-npm run build
-```
-
-**Environment Variables Not Loading:**
-
-- Ensure `.env.local` is in the correct directory
-- Check variable names match exactly
-- Restart development server after changes
-
-**Firebase Connection Issues:**
-
-- Verify project ID and configuration
-- Check Firestore rules allow read/write
-- Ensure API keys are valid
-
-**Email Not Sending:**
-
-- Verify Resend API key
-- Check domain verification status
-- Review email template formatting
-
-**OpenAI Chatbot Not Working:**
-
-- Verify OpenAI API key is valid
-- Check API usage limits and billing
-- Ensure API key has proper permissions
-
-### Getting Help
-
-1. **Check Console Errors**: Browser DevTools > Console
-2. **Review Network Tab**: Check for failed API requests
-3. **Verify Environment Variables**: Ensure all required variables are set
-4. **Test Individual Components**: Isolate issues to specific features
 
 ## 📁 Project Structure
 
 ```
-portfolio-template/
-├── src/
-│   ├── app/                    # Next.js App Router
-│   │   ├── api/               # API endpoints
-│   │   │   ├── chatbot/       # AI chatbot logic
-│   │   │   ├── contact/       # Contact form processing
-│   │   │   ├── analytics/     # Analytics endpoints
-│   │   │   └── auth/         # Authentication flows
-│   │   ├── analytics/         # Analytics dashboard
-│   │   ├── globals.css        # Global styles
-│   │   ├── layout.tsx         # Root layout with metadata
-│   │   └── page.tsx           # Main portfolio page
-│   ├── components/            # React components
-│   │   ├── sections/          # Page sections
-│   │   │   ├── HeroSection.tsx
-│   │   │   ├── AboutSection.tsx
-│   │   │   ├── SkillsSection.tsx
-│   │   │   ├── TimelineSection.tsx
-│   │   │   ├── ProjectsSection.tsx
-│   │   │   └── ContactSection.tsx
-│   │   ├── chatbot/           # Chatbot components
-│   │   ├── analytics/         # Analytics components
-│   │   └── providers/         # Context providers
-│   ├── hooks/                 # Custom React hooks
-│   ├── lib/                   # Utility functions
-│   └── types/                 # TypeScript definitions
-├── public/                    # Static assets
-│   ├── images/               # Project and logo images
-│   ├── resume.pdf           # Your resume
-│   └── favicon.png          # Site icon
-├── .env.example             # Environment variables template
-├── .env.local               # Your environment variables (create this)
-├── package.json            # Dependencies
-└── README.md              # This file
+src/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Main layout with meta tags
+│   ├── page.tsx           # Home page with all sections
+│   └── globals.css        # Global styles
+├── components/
+│   ├── sections/          # Portfolio sections
+│   ├── layout/            # Navigation and layout components
+│   ├── chatbot/           # Optional AI chatbot
+│   └── analytics/         # Optional analytics dashboard
+├── lib/                   # Utility functions
+└── types/                 # TypeScript type definitions
 ```
 
-## 📋 Setup Checklist
+## 🚀 Deployment
 
-- [ ] Repository cloned/downloaded
-- [ ] Dependencies installed (`npm install`)
-- [ ] Environment variables configured (`.env.local`)
-- [ ] Firebase project created and configured
-- [ ] Resend account created and API key obtained
-- [ ] OpenAI API key created (optional)
-- [ ] Google Calendar OAuth set up (optional)
-- [ ] Analytics password set (optional)
-- [ ] Personal information updated in all sections
-- [ ] Skills and experience customized
-- [ ] Projects added with your work
-- [ ] Contact information updated
-- [ ] Resume file uploaded (`public/resume.pdf`)
-- [ ] Social media links updated
-- [ ] Tour steps customized
-- [ ] Images replaced with your own
-- [ ] Development server tested (`npm run dev`)
-- [ ] Production build successful (`npm run build`)
-- [ ] Deployed to hosting platform
-- [ ] Custom domain configured
-- [ ] Analytics dashboard tested
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy automatically on every push
+
+### Deploy to Netlify
+
+1. Build the project: `npm run build`
+2. Upload the `.next` folder to Netlify
+3. Set build command: `npm run build`
+4. Set publish directory: `.next`
+
+### Deploy to GitHub Pages
+
+1. Add to `package.json`:
+
+```json
+{
+  "scripts": {
+    "export": "next build && next export",
+    "deploy": "npm run export && touch out/.nojekyll"
+  }
+}
+```
+
+2. Run `npm run deploy` and push the `out` folder to GitHub Pages
+
+## 🛠️ Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests
+
+### Adding Dependencies
+
+```bash
+npm install package-name
+```
+
+### Environment Variables
+
+Create `.env.local` for local development:
+
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+## 🎯 Tips for Success
+
+### Content Strategy
+
+- **Keep it concise**: Each section should be scannable in 30 seconds
+- **Show results**: Include metrics, outcomes, and impact
+- **Use visuals**: Add screenshots, diagrams, or videos
+- **Tell stories**: Explain the "why" behind your work
+
+### Technical Tips
+
+- **Optimize images**: Use WebP format and compress images
+- **Test mobile**: Always check mobile responsiveness
+- **Performance**: Monitor Core Web Vitals
+- **SEO**: Add meta descriptions and alt text
+
+### Common Customizations
+
+**Change Color Scheme:**
+
+```typescript
+// In tailwind.config.ts
+colors: {
+  primary: '#your-color',
+  secondary: '#your-color',
+}
+```
+
+**Add Custom Fonts:**
+
+```css
+/* In globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Your+Font:wght@400;700&display=swap");
+```
+
+**Modify Layout:**
+
+```typescript
+// In page.tsx - reorder sections as needed
+<HeroSection />
+<AboutSection />
+<SkillsSection />
+// ... etc
+```
 
 ## 🤝 Contributing
-
-Want to improve this template? Contributions are welcome!
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
+4. Test thoroughly
 5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - feel free to use it for your personal or commercial projects.
+MIT License - feel free to use this template for your own projects!
 
-## 📞 Support
+## 🆘 Need Help?
 
-Need help setting up your portfolio?
-
-- **Documentation**: Check this README and inline comments
-- **Issues**: Report bugs or request features via GitHub Issues
-- **Community**: Join discussions about customization and improvements
+- **Issues**: Create a GitHub issue
+- **Questions**: Check the documentation above
+- **Custom Development**: Consider hiring a developer for complex customizations
 
 ---
 
-**Built with ❤️ using:**
-
-- Next.js 14 & React 18
-- TypeScript & TailwindCSS
-- Framer Motion & Recharts
-- OpenAI API & Firebase
-- Resend & Google APIs
-
-_Transform your professional presence with this modern, AI-powered portfolio template!_
+**Made with ❤️ for the developer community**
