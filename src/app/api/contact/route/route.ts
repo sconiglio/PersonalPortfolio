@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 // Email configuration
 const emailConfig = {
@@ -20,6 +23,18 @@ export async function POST(request: NextRequest) {
 
     if (!image) {
       return NextResponse.json({ error: "No image provided" }, { status: 400 });
+    }
+
+    // Check if Resend is configured
+    if (!resend) {
+      console.log("[DEBUG] Resend not configured - skipping image email send");
+      return NextResponse.json(
+        {
+          message: "Image upload received (email service not configured)",
+          data: null,
+        },
+        { status: 200 }
+      );
     }
 
     // Convert image to buffer for email attachment

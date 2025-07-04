@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 export async function POST(request: NextRequest) {
   try {
@@ -44,8 +47,20 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Check if Resend is configured
+    if (!resend) {
+      console.log("[DEBUG] Resend not configured - skipping email send");
+      return NextResponse.json(
+        {
+          message: "Contact form received (email service not configured)",
+          data: null,
+        },
+        { status: 200 }
+      );
+    }
+
     // Send email using Resend
-    const emailDestination = process.env.EMAIL_NAME || "your.email@example.com";
+    const emailDestination = process.env.YOUR_EMAIL || "your.email@example.com";
     const { data, error } = await resend.emails.send({
       from: `Lawrence Hua Portfolio <${process.env.FROM_EMAIL || "noreply@lawrencehua.com"}>`,
       to: [emailDestination],
@@ -80,7 +95,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to user if email is provided
     let userEmailSent = false;
-    if (email) {
+    if (email && resend) {
       try {
         const { data: userData, error: userError } = await resend.emails.send({
           from: `YOUR_NAME Portfolio <${process.env.FROM_EMAIL || "noreply@yourdomain.com"}>`,

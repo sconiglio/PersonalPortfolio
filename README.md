@@ -48,93 +48,197 @@ A sophisticated, modern portfolio website template featuring advanced AI integra
 - **One-Click Deploy**: Ready for Vercel, Netlify, and other platforms
 - **Version Management**: Automatic versioning with GitHub Actions
 
-## 🚀 Quick Start Guide
+## 🚀 Complete Setup Guide
 
 ### Prerequisites
 
 - **Node.js 18+** (Latest LTS recommended)
-- **pnpm** or **npm** package manager
 - **Git** for version control
+- **A code editor** (VS Code recommended)
+- **Basic knowledge** of React/Next.js (helpful but not required)
 
 ### Step 1: Get the Template
 
 ```bash
-# Clone or download this repository
-git clone [YOUR_REPO_URL]
-cd portfolio-template/portfolio
+# Clone this repository
+git clone https://github.com/LawrenceHua/modern-portfolio-template.git
+cd modern-portfolio-template
+
+# Or download and extract the ZIP file
+# Then navigate to the extracted folder
 ```
 
 ### Step 2: Install Dependencies
 
 ```bash
-pnpm install
-# or
+# Install all required packages
 npm install
+
+# Or if you prefer yarn
+yarn install
+
+# Or if you prefer pnpm
+pnpm install
 ```
 
 ### Step 3: Set Up Environment Variables
 
-Create a `.env.local` file in the portfolio directory:
+```bash
+# Copy the environment template
+cp .env.example .env.local
+
+# Edit the .env.local file with your actual values
+# See detailed setup instructions below
+```
+
+## 🔧 API Setup Instructions
+
+### 1. Firebase Setup (Required for Analytics)
+
+**Step-by-step guide:**
+
+1. **Create Firebase Project**
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Click "Create a project" or "Add project"
+   - Enter a project name (e.g., "my-portfolio-analytics")
+   - Choose whether to enable Google Analytics (recommended)
+   - Click "Create project"
+
+2. **Add Web App**
+   - In your Firebase project, click the web icon (</>)
+   - Register app with a nickname (e.g., "portfolio-website")
+   - Click "Register app"
+
+3. **Get Configuration**
+   - Copy the configuration object that looks like this:
+
+   ```javascript
+   const firebaseConfig = {
+     apiKey: "AIzaSyC...",
+     authDomain: "your-project.firebaseapp.com",
+     projectId: "your-project",
+     storageBucket: "your-project.appspot.com",
+     messagingSenderId: "123456789",
+     appId: "1:123456789:web:abc123",
+     measurementId: "G-ABC123DEF4",
+   };
+   ```
+
+4. **Enable Firestore Database**
+   - In Firebase Console, go to "Firestore Database"
+   - Click "Create database"
+   - Choose "Start in test mode" (for development)
+   - Select a location close to your users
+   - Click "Done"
+
+5. **Update Environment Variables**
+   ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyC...
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789
+   NEXT_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abc123
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-ABC123DEF4
+   ```
+
+### 2. Resend Email Setup (Required for Contact Forms)
+
+**Step-by-step guide:**
+
+1. **Create Resend Account**
+   - Go to [Resend](https://resend.com/)
+   - Click "Sign up" and create an account
+   - Verify your email address
+
+2. **Get API Key**
+   - In Resend dashboard, go to "API Keys"
+   - Click "Create API Key"
+   - Give it a name (e.g., "Portfolio Contact Form")
+   - Copy the API key (starts with `re_`)
+
+3. **Verify Domain (Recommended for Production)**
+   - Go to "Domains" in Resend dashboard
+   - Click "Add Domain"
+   - Enter your domain (e.g., `yourdomain.com`)
+   - Add the DNS records as instructed
+   - Wait for verification (can take up to 24 hours)
+
+4. **Update Environment Variables**
+   ```env
+   RESEND_API_KEY=re_your_api_key_here
+   YOUR_EMAIL=your.email@example.com
+   ```
+
+### 3. OpenAI API Setup (Optional but Recommended)
+
+**Step-by-step guide:**
+
+1. **Create OpenAI Account**
+   - Go to [OpenAI Platform](https://platform.openai.com/)
+   - Click "Sign up" and create an account
+   - Verify your email and phone number
+
+2. **Add Payment Method**
+   - Go to "Billing" in your OpenAI account
+   - Add a credit card or payment method
+   - Set usage limits (recommended: $10-20/month)
+
+3. **Create API Key**
+   - Go to "API Keys" in your OpenAI account
+   - Click "Create new secret key"
+   - Give it a name (e.g., "Portfolio Chatbot")
+   - Copy the API key (starts with `sk-`)
+
+4. **Update Environment Variables**
+   ```env
+   OPENAI_API_KEY=sk-your_api_key_here
+   ```
+
+### 4. Google Calendar Setup (Optional)
+
+**Step-by-step guide:**
+
+1. **Create Google Cloud Project**
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Click "Select a project" > "New Project"
+   - Enter a project name (e.g., "portfolio-calendar")
+   - Click "Create"
+
+2. **Enable Google Calendar API**
+   - In your project, go to "APIs & Services" > "Library"
+   - Search for "Google Calendar API"
+   - Click on it and click "Enable"
+
+3. **Create OAuth 2.0 Credentials**
+   - Go to "APIs & Services" > "Credentials"
+   - Click "Create Credentials" > "OAuth 2.0 Client IDs"
+   - Choose "Web application"
+   - Add authorized redirect URIs:
+     - `http://localhost:3000/api/auth/callback` (for development)
+     - `https://yourdomain.com/api/auth/callback` (for production)
+   - Click "Create"
+   - Copy the Client ID and Client Secret
+
+4. **Update Environment Variables**
+   ```env
+   GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET=your_client_secret
+   GOOGLE_REDIRECT_URI=https://yourdomain.com/api/auth/callback
+   GOOGLE_CALENDAR_ID=your_calendar_id@gmail.com
+   ```
+
+### 5. Analytics Dashboard Password
 
 ```env
-# ==============================================================================
-# PORTFOLIO TEMPLATE - ENVIRONMENT VARIABLES
-# ==============================================================================
-
-# ------------------------------------------------------------------------------
-# FIREBASE CONFIGURATION (Required for analytics)
-# ------------------------------------------------------------------------------
-# Get these from Firebase Console > Project Settings > General > Your apps
-NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key_here
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
-NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
-
-# ------------------------------------------------------------------------------
-# EMAIL CONFIGURATION (Required for contact forms)
-# ------------------------------------------------------------------------------
-# Sign up at https://resend.com/ and get your API key
-RESEND_API_KEY=re_your_resend_api_key_here
-YOUR_EMAIL=your.email@example.com
-
-# ------------------------------------------------------------------------------
-# AI CHATBOT (Optional but recommended)
-# ------------------------------------------------------------------------------
-# Get your API key from https://platform.openai.com/api-keys
-OPENAI_API_KEY=sk-your_openai_api_key_here
-
-# ------------------------------------------------------------------------------
-# GOOGLE CALENDAR (Optional - for meeting scheduling)
-# ------------------------------------------------------------------------------
-GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-GOOGLE_REDIRECT_URI=https://yourdomain.com/api/auth/callback
-GOOGLE_CALENDAR_ID=your_calendar_id@gmail.com
-
-# ------------------------------------------------------------------------------
-# ANALYTICS DASHBOARD (Optional)
-# ------------------------------------------------------------------------------
-# Password to protect your analytics dashboard
 NEXT_PUBLIC_SECRET_PASS=your_secure_password_here
+```
 
-# ------------------------------------------------------------------------------
-# SITE CONFIGURATION
-# ------------------------------------------------------------------------------
+### 6. Site Configuration
+
+```env
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 ```
-
-### Step 4: Start Development Server
-
-```bash
-pnpm dev
-# or
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to see your portfolio template.
 
 ## 📝 Customization Guide
 
@@ -144,20 +248,50 @@ Open [http://localhost:3000](http://localhost:3000) to see your portfolio templa
 
 #### `src/app/layout.tsx`
 
-- Replace `YOUR_NAME`, `YOUR_TITLE`, `YOUR_DOMAIN` with your details
-- Update metadata, Open Graph images, and social links
+Replace all `YOUR_*` placeholders:
+
+```typescript
+export const metadata: Metadata = {
+  metadataBase: new URL("https://yourdomain.com"),
+  title: "Your Name - Your Title",
+  description:
+    "Portfolio website showcasing my work in Your Expertise and Your Field",
+  // ... update all other metadata
+};
+```
 
 #### `src/components/sections/HeroSection.tsx`
 
-- Replace `YOUR_FIRST_NAME`, `YOUR_LAST_NAME`, `YOUR_TITLE`
-- Update `YOUR_EDUCATION`, `YOUR_EXPERTISE`, `YOUR_COMPANY_ROLE`
-- Replace `YOUR_LINKEDIN_URL`, `YOUR_COMPANY_URL`
+Update personal information:
+
+```typescript
+// Replace these placeholders
+const heroData = {
+  firstName: "Your",
+  lastName: "Name",
+  title: "Your Professional Title",
+  education: "Your University",
+  expertise: "Your Expertise",
+  companyRole: "Your Company Role",
+  linkedinUrl: "https://linkedin.com/in/yourprofile",
+  companyUrl: "https://yourcompany.com",
+};
+```
 
 #### `src/components/sections/AboutSection.tsx`
 
-- Replace the entire story section with your professional journey
-- Update `YOUR_DEGREE`, `YOUR_UNIVERSITY`, `YOUR_ROLE`, `YOUR_COMPANY`
-- Customize your skills formula and personal interests
+Replace the entire story section with your professional journey:
+
+```typescript
+const aboutData = {
+  story: "Your professional story here...",
+  degree: "Your Degree",
+  university: "Your University",
+  role: "Your Role",
+  company: "Your Company",
+  // ... update all other fields
+};
+```
 
 ### 2. Skills & Experience
 
@@ -169,10 +303,10 @@ Replace the `skillsData` object with your own skills:
 const skillsData: Record<string, Skill[]> = {
   business: [
     {
-      name: "Product Management", // Your skill name
+      name: "Product Management",
       level: "expert", // "expert", "proficient", or "familiar"
       category: "business",
-      icon: "🎯", // Choose an emoji
+      icon: "🎯",
       experience: "3+ years",
       projects: 8,
       achievement: "Led product strategy for 3 major launches",
@@ -186,23 +320,63 @@ const skillsData: Record<string, Skill[]> = {
 
 #### `src/components/sections/TimelineSection.tsx`
 
-- Replace education and work experience with your background
-- Update company logos, dates, and descriptions
+Replace education and work experience:
+
+```typescript
+const timelineData: TimelineEvent[] = [
+  {
+    type: "education",
+    year: "2024",
+    title: "Your Degree",
+    org: "Your University",
+    date: "Aug 2023 - Dec 2024",
+    logo: "/images/logos/pm_happy_hour_logo.jpeg",
+    details: [
+      "Your educational achievements...",
+      "Relevant coursework...",
+      "Awards and honors...",
+    ],
+  },
+  // Add more education and experience...
+];
+```
 
 #### `src/components/sections/ProjectsSection.tsx`
 
-- Showcase your projects with descriptions, tech stacks, and links
-- Replace project images and achievements
+Showcase your projects:
+
+```typescript
+const projectsData = {
+  all: [
+    {
+      title: "Your Project Name",
+      description: "Detailed description of your project...",
+      image: "/images/logos/pm_happy_hour_logo.jpeg",
+      tags: ["Technology", "Skills", "Used"],
+      link: "https://yourproject.com",
+      linkText: "View Project",
+      linkIcon: "external" as const,
+      featured: true,
+      achievements: [
+        "Key achievement 1",
+        "Key achievement 2",
+        "Key achievement 3",
+      ],
+    },
+    // Add more projects...
+  ],
+};
+```
 
 ### 3. Images & Assets
 
 **Replace these files in `public/` directory:**
 
-- `profile.jpg` - Your profile picture (square, 400x400px recommended)
-- `resume.pdf` - Your resume file
-- `og-image.png` - Social media preview image (1200x630px)
-- `favicon.png` - Your website icon
-- `logos/` - Replace with your company/project logos
+- `public/images/logos/pm_happy_hour_logo.jpeg` - Replace with your own logo/image
+- `public/resume.pdf` - Your resume file
+- `public/og-image.png` - Social media preview image (1200x630px)
+- `public/favicon.png` - Your website icon
+- `public/apple-touch-icon.png` - Apple device icon
 
 **Image Optimization Tips:**
 
@@ -210,14 +384,25 @@ const skillsData: Record<string, Skill[]> = {
 - Keep images under 500KB
 - Use appropriate alt text for accessibility
 
-### 4. Contact Information
+### 4. Tour System Customization
 
-#### Update Contact Methods:
+Edit the `tourSteps` array in `src/app/page.tsx`:
 
-- Email addresses in environment variables
-- Social media links in HeroSection and ContactSection
-- Phone number (if desired) in ContactSection
-- LinkedIn, GitHub, and other professional profiles
+```typescript
+const tourSteps: TourStep[] = [
+  {
+    id: "intro",
+    title: "👋 Welcome! I'm Your Name.",
+    content: "Brief introduction to your background and expertise.",
+    targetSection: "hero",
+    icon: <FiUser className="w-5 h-5" />,
+    color: "from-gray-600 to-gray-700",
+    duration: 8000,
+    position: "center",
+  },
+  // Add more steps...
+];
+```
 
 ### 5. Colors & Branding
 
@@ -230,7 +415,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Add your brand colors
         brand: {
           50: "#your-light-color",
           500: "#your-main-color",
@@ -241,52 +425,6 @@ module.exports = {
   },
 };
 ```
-
-#### CSS Variables in `src/app/globals.css`
-
-Update gradient and theme colors throughout the site.
-
-## 🔧 Advanced Configuration
-
-### Firebase Setup
-
-1. **Create Firebase Project**
-   - Go to [Firebase Console](https://console.firebase.google.com/)
-   - Create a new project
-   - Enable Firestore database
-   - Get configuration from Project Settings
-
-2. **Configure Firestore Rules**
-   ```javascript
-   rules_version = '2';
-   service cloud.firestore {
-     match /databases/{database}/documents {
-       match /{document=**} {
-         allow read, write: if true;
-       }
-     }
-   }
-   ```
-
-### Resend Email Setup
-
-1. **Sign up at [Resend](https://resend.com/)**
-2. **Verify your domain** (recommended for production)
-3. **Get your API key** from the dashboard
-4. **Configure DNS records** for better deliverability
-
-### OpenAI Integration
-
-1. **Get API key** from [OpenAI Platform](https://platform.openai.com/api-keys)
-2. **Set usage limits** to control costs
-3. **Customize chatbot prompts** in `/api/chatbot/route.ts`
-
-### Google Calendar Integration
-
-1. **Create Google Cloud Project**
-2. **Enable Calendar API**
-3. **Set up OAuth 2.0 credentials**
-4. **Configure redirect URIs**
 
 ## 🚀 Deployment Guide
 
@@ -305,28 +443,39 @@ Update gradient and theme colors throughout the site.
 2. **Configure Environment Variables**
    - Go to Vercel Dashboard > Project Settings > Environment Variables
    - Add all variables from your `.env.local` file
+   - Make sure to set them for Production environment
 
 3. **Custom Domain**
    - Add your domain in Vercel Dashboard
    - Update DNS records as instructed
+   - Update `NEXT_PUBLIC_SITE_URL` in environment variables
 
-### Other Platforms
+### Netlify
 
-#### Netlify
+1. **Connect Repository**
+   - Go to [Netlify](https://netlify.com/)
+   - Click "New site from Git"
+   - Connect your GitHub repository
 
-```bash
-# Build command
-npm run build
+2. **Configure Build Settings**
+   - Build command: `npm run build`
+   - Publish directory: `out`
+   - Node version: `18` (or latest LTS)
 
-# Publish directory
-out
-```
+3. **Environment Variables**
+   - Go to Site Settings > Environment Variables
+   - Add all variables from your `.env.local` file
 
-#### Railway/Render
+### Railway/Render
 
-- Configure environment variables in platform dashboard
-- Set build command to `npm run build`
-- Set start command to `npm start`
+1. **Connect Repository**
+   - Go to Railway/Render dashboard
+   - Create new service from Git repository
+
+2. **Configure Environment**
+   - Set build command: `npm run build`
+   - Set start command: `npm start`
+   - Add environment variables in platform dashboard
 
 ## 📊 Analytics Dashboard
 
@@ -339,36 +488,6 @@ Access your analytics at `https://yourdomain.com/analytics`
 - **Interaction Tracking**: Monitor button clicks, tour engagement
 - **Chatbot Analytics**: Conversation metrics and popular topics
 - **Performance Metrics**: Page load times and user engagement
-
-## 🎯 Tour System Customization
-
-### Modify Tour Steps
-
-Edit the `tourSteps` array in `src/app/page.tsx`:
-
-```typescript
-const tourSteps: TourStep[] = [
-  {
-    id: "intro",
-    title: "👋 Welcome! I'm YOUR_NAME.",
-    content: "Brief introduction to your background and expertise.",
-    targetSection: "hero",
-    icon: <FiUser className="w-5 h-5" />,
-    color: "from-purple-600 to-pink-600",
-    duration: 8000,
-    position: "top-right",
-  },
-  // Add more steps...
-];
-```
-
-### Targeting Elements
-
-Each tour step targets specific elements on your page:
-
-- Use `targetSection` to point to section IDs
-- Customize `position` for optimal arrow placement
-- Adjust `duration` for step timing
 
 ## 🔐 Security Best Practices
 
@@ -416,6 +535,12 @@ npm run build
 - Check domain verification status
 - Review email template formatting
 
+**OpenAI Chatbot Not Working:**
+
+- Verify OpenAI API key is valid
+- Check API usage limits and billing
+- Ensure API key has proper permissions
+
 ### Getting Help
 
 1. **Check Console Errors**: Browser DevTools > Console
@@ -426,13 +551,13 @@ npm run build
 ## 📁 Project Structure
 
 ```
-portfolio/
+portfolio-template/
 ├── src/
 │   ├── app/                    # Next.js App Router
 │   │   ├── api/               # API endpoints
 │   │   │   ├── chatbot/       # AI chatbot logic
 │   │   │   ├── contact/       # Contact form processing
-│   │   │   ├── analytics*/    # Analytics endpoints
+│   │   │   ├── analytics/     # Analytics endpoints
 │   │   │   └── auth/         # Authentication flows
 │   │   ├── analytics/         # Analytics dashboard
 │   │   ├── globals.css        # Global styles
@@ -445,7 +570,6 @@ portfolio/
 │   │   │   ├── SkillsSection.tsx
 │   │   │   ├── TimelineSection.tsx
 │   │   │   ├── ProjectsSection.tsx
-│   │   │   ├── TestimonialsSection.tsx
 │   │   │   └── ContactSection.tsx
 │   │   ├── chatbot/           # Chatbot components
 │   │   ├── analytics/         # Analytics components
@@ -455,14 +579,37 @@ portfolio/
 │   └── types/                 # TypeScript definitions
 ├── public/                    # Static assets
 │   ├── images/               # Project and logo images
-│   ├── profile.jpg           # Your profile picture
 │   ├── resume.pdf           # Your resume
 │   └── favicon.png          # Site icon
-├── .env.local               # Environment variables (create this)
-├── .env.example            # Environment template
+├── .env.example             # Environment variables template
+├── .env.local               # Your environment variables (create this)
 ├── package.json            # Dependencies
 └── README.md              # This file
 ```
+
+## 📋 Setup Checklist
+
+- [ ] Repository cloned/downloaded
+- [ ] Dependencies installed (`npm install`)
+- [ ] Environment variables configured (`.env.local`)
+- [ ] Firebase project created and configured
+- [ ] Resend account created and API key obtained
+- [ ] OpenAI API key created (optional)
+- [ ] Google Calendar OAuth set up (optional)
+- [ ] Analytics password set (optional)
+- [ ] Personal information updated in all sections
+- [ ] Skills and experience customized
+- [ ] Projects added with your work
+- [ ] Contact information updated
+- [ ] Resume file uploaded (`public/resume.pdf`)
+- [ ] Social media links updated
+- [ ] Tour steps customized
+- [ ] Images replaced with your own
+- [ ] Development server tested (`npm run dev`)
+- [ ] Production build successful (`npm run build`)
+- [ ] Deployed to hosting platform
+- [ ] Custom domain configured
+- [ ] Analytics dashboard tested
 
 ## 🤝 Contributing
 
@@ -477,11 +624,6 @@ Want to improve this template? Contributions are welcome!
 ## 📄 License
 
 This project is licensed under the MIT License - feel free to use it for your personal or commercial projects.
-
-## 🔗 Demo & Examples
-
-- **Live Demo**: [View template demo](https://your-demo-url.com)
-- **Example Portfolio**: See how others have customized this template
 
 ## 📞 Support
 

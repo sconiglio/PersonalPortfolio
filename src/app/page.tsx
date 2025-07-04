@@ -1661,16 +1661,8 @@ export default function ModernHome() {
       );
       scrollToSection(tourSteps[nextStepIndex].targetSection, nextStepIndex);
     } else {
-      // Tour complete, scroll to testimonials first then show final CTA
-      const testimonialsSection = document.getElementById("testimonials");
-      if (testimonialsSection) {
-        const elementPosition = testimonialsSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - 120;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
+      // Tour complete, show final CTA
+      // Note: Testimonials section removed from template
 
       // Track tour completion
       trackTourEvent("completed", "final", tourSteps.length);
