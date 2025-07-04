@@ -53,8 +53,8 @@ export function AboutSection() {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
-        <div className="absolute bottom-20 left-20 h-64 w-64 rounded-full bg-purple-500/5 blur-3xl" />
+        <div className="absolute top-20 right-20 h-64 w-64 rounded-full bg-gray-500/5 blur-3xl" />
+        <div className="absolute bottom-20 left-20 h-64 w-64 rounded-full bg-gray-500/5 blur-3xl" />
       </div>
 
       <motion.div
@@ -65,25 +65,22 @@ export function AboutSection() {
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-            About{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              YOUR_NAME
-            </span>
+          <h2 className="mb-6 text-4xl font-bold text-black dark:text-white sm:text-5xl">
+            About <span className="text-black dark:text-white">YOUR_NAME</span>
           </h2>
-          <div className="mx-auto h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+          <div className="mx-auto h-1 w-24 bg-black dark:bg-white rounded-full" />
         </motion.div>
 
         {/* Main Content */}
         <div className="space-y-12">
           {/* Story Section */}
           <motion.div variants={itemVariants}>
-            <div className="rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 p-8 shadow-xl">
-              <h3 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white text-center">
+            <div className="rounded-2xl bg-gray-50 dark:bg-gray-900 p-8 shadow-xl">
+              <h3 className="mb-6 text-2xl font-bold text-black dark:text-white text-center">
                 My Journey in Product Management
               </h3>
 
-              <div className="space-y-4 text-slate-700 dark:text-slate-300 max-w-4xl mx-auto">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
                 <p className="text-lg leading-relaxed">
                   It all started when I realized that the most impactful
                   products aren't just about features—they're about
@@ -92,7 +89,7 @@ export function AboutSection() {
                     understanding user needs
                   </span>{" "}
                   and translating them into
-                  <span className="font-semibold text-gray-600 dark:text-gray-400 underline decoration-gray-400/50">
+                  <span className="font-semibold text-gray-600 dark:text-gray-400">
                     {" "}
                     meaningful experiences
                   </span>
@@ -101,7 +98,7 @@ export function AboutSection() {
 
                 <p>
                   With a{" "}
-                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900/20 px-1 rounded">
+                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-1 rounded">
                     Master's in Business Administration
                   </strong>
                   , I've <span className="font-semibold">bridged the gap</span>{" "}
@@ -120,7 +117,7 @@ export function AboutSection() {
 
                 <p>
                   As a{" "}
-                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900/20 px-1 rounded">
+                  <strong className="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-1 rounded">
                     Senior Product Manager
                   </strong>
                   , I've led product initiatives that improved user engagement
@@ -172,7 +169,7 @@ export function AboutSection() {
 
               {/* Icon Formula */}
               <motion.div
-                className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700"
+                className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
@@ -184,12 +181,12 @@ export function AboutSection() {
                     whileHover={{ scale: 1.1, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gray-100 dark:bg-gray-800 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200 dark:border-gray-700">
                       <div className="w-full h-full flex items-center justify-center text-2xl">
                         🎯
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                    <span className="text-xs font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">
                       Product Strategy
                     </span>
                   </motion.div>
@@ -204,12 +201,12 @@ export function AboutSection() {
                     whileHover={{ scale: 1.1, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gray-100 dark:bg-gray-800 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200 dark:border-gray-700">
                       <div className="w-full h-full flex items-center justify-center text-2xl">
                         🔍
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                    <span className="text-xs font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">
                       User Research
                     </span>
                   </motion.div>
@@ -224,12 +221,12 @@ export function AboutSection() {
                     whileHover={{ scale: 1.1, y: -2 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mb-2 relative rounded-full bg-gray-100 dark:bg-gray-800 p-3 sm:p-4 shadow-lg group-hover:shadow-xl transition-all duration-200 border border-gray-200 dark:border-gray-700">
                       <div className="w-full h-full flex items-center justify-center text-2xl">
                         📊
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                    <span className="text-xs font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">
                       Data Analysis
                     </span>
                   </motion.div>
@@ -244,12 +241,12 @@ export function AboutSection() {
                     whileHover={{ scale: 1.15, y: -3 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 mb-2 relative rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 p-5 sm:p-6 shadow-xl group-hover:shadow-2xl transition-all duration-200 border border-gray-200/50 dark:border-gray-700/50 group-hover:border-gray-300 dark:group-hover:border-gray-600">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 mb-2 relative rounded-full bg-gray-100 dark:bg-gray-800 p-5 sm:p-6 shadow-xl group-hover:shadow-2xl transition-all duration-200 border border-gray-200 dark:border-gray-700">
                       <div className="w-full h-full flex items-center justify-center text-3xl">
                         🚀
                       </div>
                     </div>
-                    <span className="text-sm font-bold text-transparent bg-gradient-to-r from-gray-600 to-gray-700 bg-clip-text whitespace-nowrap">
+                    <span className="text-sm font-bold text-gray-600 dark:text-gray-400 whitespace-nowrap">
                       Successful Product Manager
                     </span>
                   </motion.div>
@@ -262,56 +259,56 @@ export function AboutSection() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Key Facts */}
             <motion.div variants={itemVariants}>
-              <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-900 dark:to-blue-950 p-8 shadow-xl">
-                <h3 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
+              <div className="rounded-2xl bg-gray-50 dark:bg-gray-900 p-8 shadow-xl">
+                <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   What I Bring
                 </h3>
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white font-bold">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white text-white dark:text-black font-bold">
                       1
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white">
-                        <span className="text-blue-600 dark:text-blue-400">
-                          AI Technical Foundation
+                      <h4 className="font-semibold text-black dark:text-white">
+                        <span className="text-black dark:text-white">
+                          Technical Foundation
                         </span>
                       </h4>
-                      <p className="text-sm text-slate-600 dark:text-slate-300">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Hands-on experience with{" "}
-                        <span className="font-medium text-blue-600 dark:text-blue-400">
+                        <span className="font-medium text-gray-600 dark:text-gray-400">
                           ML models
                         </span>
                         ,{" "}
-                        <span className="font-medium text-purple-600 dark:text-purple-400">
+                        <span className="font-medium text-gray-600 dark:text-gray-400">
                           computer vision
                         </span>
                         , and
-                        <span className="font-medium text-green-600 dark:text-green-400">
+                        <span className="font-medium text-gray-600 dark:text-gray-400">
                           {" "}
-                          GPT integrations
+                          AI integrations
                         </span>
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-600 text-white font-bold">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white text-white dark:text-black font-bold">
                       2
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white">
-                        <span className="text-purple-600 dark:text-purple-400">
+                      <h4 className="font-semibold text-black dark:text-white">
+                        <span className="text-black dark:text-white">
                           Product Strategy
                         </span>
                       </h4>
-                      <p className="text-sm text-slate-600 dark:text-slate-300">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         From{" "}
                         <span className="font-medium">roadmap planning</span> to{" "}
                         <span className="font-medium">A/B testing</span>,
                         driving{" "}
-                        <span className="font-bold text-green-600 dark:text-green-400">
+                        <span className="font-bold text-gray-600 dark:text-gray-400">
                           20%+ adoption improvements
                         </span>
                       </p>
@@ -319,26 +316,26 @@ export function AboutSection() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-white font-bold">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white text-white dark:text-black font-bold">
                       3
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white">
-                        <span className="text-green-600 dark:text-green-400">
+                      <h4 className="font-semibold text-black dark:text-white">
+                        <span className="text-black dark:text-white">
                           Cross-functional Leadership
                         </span>
                       </h4>
-                      <p className="text-sm text-slate-600 dark:text-slate-300">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         Leading{" "}
-                        <span className="font-medium text-blue-600 dark:text-blue-400">
+                        <span className="font-medium text-gray-600 dark:text-gray-400">
                           engineering teams
                         </span>
                         , managing{" "}
-                        <span className="font-medium text-purple-600 dark:text-purple-400">
+                        <span className="font-medium text-gray-600 dark:text-gray-400">
                           stakeholders
                         </span>
                         , and driving{" "}
-                        <span className="font-medium text-green-600 dark:text-green-400">
+                        <span className="font-medium text-gray-600 dark:text-gray-400">
                           consensus
                         </span>
                       </p>
@@ -350,33 +347,33 @@ export function AboutSection() {
 
             {/* Values */}
             <motion.div variants={itemVariants}>
-              <div className="rounded-2xl bg-gradient-to-br from-green-50 to-blue-50 dark:from-slate-900 dark:to-green-950 p-8 shadow-xl">
-                <h3 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
+              <div className="rounded-2xl bg-gray-50 dark:bg-gray-900 p-8 shadow-xl">
+                <h3 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Core Values
                 </h3>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="mb-2 text-2xl">🎯</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                    <div className="text-sm font-semibold text-black dark:text-white">
                       User-Centric
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="mb-2 text-2xl">🚀</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                    <div className="text-sm font-semibold text-black dark:text-white">
                       Innovation
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="mb-2 text-2xl">📊</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                    <div className="text-sm font-semibold text-black dark:text-white">
                       Data-Driven
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="mb-2 text-2xl">🤝</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                    <div className="text-sm font-semibold text-black dark:text-white">
                       Collaborative
                     </div>
                   </div>
@@ -387,34 +384,34 @@ export function AboutSection() {
 
           {/* Beyond the Resume - Full Width */}
           <motion.div variants={itemVariants}>
-            <div className="rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-900 dark:to-purple-950 p-8 shadow-xl">
-              <h3 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white text-center">
+            <div className="rounded-2xl bg-gray-50 dark:bg-gray-900 p-8 shadow-xl">
+              <h3 className="mb-6 text-2xl font-bold text-black dark:text-white text-center">
                 Beyond the Resume
               </h3>
-              <p className="text-lg text-slate-600 dark:text-slate-300 max-w-4xl mx-auto text-center leading-relaxed">
-                When I'm not building AI products, you'll find me{" "}
-                <span className="font-medium text-blue-600 dark:text-blue-400">
-                  exploring the latest ML research
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-center leading-relaxed">
+                When I'm not building products, you'll find me{" "}
+                <span className="font-medium text-gray-600 dark:text-gray-400">
+                  exploring the latest technology research
                 </span>
                 ,{" "}
-                <span className="font-medium text-purple-600 dark:text-purple-400">
+                <span className="font-medium text-gray-600 dark:text-gray-400">
                   mentoring fellow product managers
                 </span>
                 , or working on{" "}
-                <span className="font-medium text-green-600 dark:text-green-400">
+                <span className="font-medium text-gray-600 dark:text-gray-400">
                   side projects that bridge technology and social impact
                 </span>
                 . I believe the best products come from{" "}
-                <span className="font-semibold text-orange-600 dark:text-orange-400">
+                <span className="font-semibold text-gray-600 dark:text-gray-400">
                   curiosity
                 </span>
                 ,
-                <span className="font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-semibold text-gray-600 dark:text-gray-400">
                   {" "}
                   empathy
                 </span>
                 , and a{" "}
-                <span className="font-semibold text-purple-600 dark:text-purple-400 underline decoration-purple-400/50">
+                <span className="font-semibold text-gray-600 dark:text-gray-400">
                   relentless focus on making things better
                 </span>
                 .
@@ -425,8 +422,8 @@ export function AboutSection() {
 
         {/* CTA */}
         <motion.div variants={itemVariants} className="mt-16 text-center">
-          <p className="mb-6 text-lg text-slate-600 dark:text-slate-300">
-            Ready to build the next AI-driven solution together?
+          <p className="mb-6 text-lg text-gray-600 dark:text-gray-300">
+            Ready to build the next solution together?
           </p>
           <motion.button
             onClick={() => {
@@ -444,7 +441,7 @@ export function AboutSection() {
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-white font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
+            className="rounded-xl bg-black dark:bg-white text-white dark:text-black px-8 py-4 font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
           >
             Explore My Skills
           </motion.button>

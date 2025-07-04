@@ -307,20 +307,12 @@ export function ContactSection({
 
   const contactMethods = [
     {
-      title: "Direct Email",
-      description: "For immediate responses and general inquiries",
+      title: "Send Message",
+      description: "For general inquiries and collaboration opportunities",
       icon: Mail,
       action: "message",
-      buttonText: "Send Email",
-      color: "from-blue-500 to-blue-600",
-    },
-    {
-      title: "Schedule a Meeting",
-      description: "Book a 30-minute call to discuss opportunities",
-      icon: Calendar,
-      action: "calendar",
-      buttonText: "Schedule Meeting",
-      color: "from-green-500 to-green-600",
+      buttonText: "Send Message",
+      color: "from-gray-500 to-gray-600",
     },
   ];
 
@@ -332,8 +324,8 @@ export function ContactSection({
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
-        <div className="absolute bottom-20 left-20 h-64 w-64 rounded-full bg-purple-500/5 blur-3xl" />
+        <div className="absolute top-20 right-20 h-64 w-64 rounded-full bg-gray-500/5 blur-3xl" />
+        <div className="absolute bottom-20 left-20 h-64 w-64 rounded-full bg-gray-500/5 blur-3xl" />
       </div>
 
       <motion.div
@@ -344,30 +336,27 @@ export function ContactSection({
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-            Let's{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Connect
-            </span>
+          <h2 className="mb-6 text-4xl font-bold text-black dark:text-white sm:text-5xl">
+            Let's <span className="text-black dark:text-white">Connect</span>
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-slate-600 dark:text-slate-300">
-            Ready to build the next AI-driven solution together?
+          <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+            Ready to work together on your next project?
             <br />
             Whether you're looking for a product manager, technical consultant,
             or just want to chat,
             <br />
-            <strong className="text-slate-900 dark:text-white text-xl font-bold">
+            <strong className="text-black dark:text-white text-xl font-bold">
               I'd love to hear from you.
             </strong>
           </p>
-          <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+          <div className="mx-auto mt-6 h-1 w-24 bg-black dark:bg-white rounded-full" />
         </motion.div>
 
         {/* Mobile-Optimized Layout */}
         <div className="space-y-12">
           {/* Contact Methods Section */}
           <motion.div variants={itemVariants} className="space-y-8">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+            <h3 className="text-2xl font-bold text-black dark:text-white">
               Get In Touch
             </h3>
 
@@ -381,8 +370,8 @@ export function ContactSection({
                     whileHover={{ scale: 1.02 }}
                     className={`group relative overflow-hidden rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer ${
                       isActive
-                        ? "bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-2 border-blue-200 dark:border-blue-800 shadow-blue-500/20"
-                        : "bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700"
+                        ? "bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700"
+                        : "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800"
                     }`}
                     onClick={() => {
                       if (
@@ -408,8 +397,8 @@ export function ContactSection({
                         <h4
                           className={`text-lg font-semibold mb-2 transition-colors duration-200 ${
                             isActive
-                              ? "text-blue-900 dark:text-blue-100"
-                              : "text-slate-900 dark:text-white"
+                              ? "text-black dark:text-white"
+                              : "text-black dark:text-white"
                           }`}
                         >
                           {method.title}
@@ -417,8 +406,8 @@ export function ContactSection({
                         <p
                           className={`text-sm mb-4 transition-colors duration-200 ${
                             isActive
-                              ? "text-blue-700 dark:text-blue-300"
-                              : "text-slate-600 dark:text-slate-300"
+                              ? "text-gray-600 dark:text-gray-300"
+                              : "text-gray-600 dark:text-gray-300"
                           }`}
                         >
                           {method.description}
@@ -618,7 +607,7 @@ export function ContactSection({
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
+                          className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:border-black dark:focus:border-white focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white transition-colors"
                           placeholder="Your name"
                         />
                       </div>
@@ -635,7 +624,7 @@ export function ContactSection({
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
+                          className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:border-black dark:focus:border-white focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white transition-colors"
                           placeholder="Your company"
                         />
                       </div>
@@ -655,7 +644,7 @@ export function ContactSection({
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
+                        className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:border-black dark:focus:border-white focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white transition-colors"
                         placeholder="your.email@company.com"
                       />
                     </div>
@@ -674,7 +663,7 @@ export function ContactSection({
                         rows={6}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
+                        className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:border-black dark:focus:border-white focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white transition-colors resize-none"
                         placeholder="Tell me about your project, opportunity, or just say hello..."
                       />
                     </div>
@@ -689,14 +678,14 @@ export function ContactSection({
                       whileTap={{
                         scale: submitStatus === "loading" ? 1 : 0.98,
                       }}
-                      className={`w-full rounded-lg px-6 py-4 font-semibold text-white transition-all duration-300 ${
+                      className={`w-full rounded-lg px-6 py-4 font-semibold text-white dark:text-black transition-all duration-300 ${
                         submitStatus === "loading"
-                          ? "bg-slate-400 cursor-not-allowed"
+                          ? "bg-gray-400 cursor-not-allowed"
                           : submitStatus === "success"
-                            ? "bg-green-600 hover:bg-green-700"
+                            ? "bg-gray-600 hover:bg-gray-700"
                             : submitStatus === "error"
-                              ? "bg-red-600 hover:bg-red-700"
-                              : "bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/25"
+                              ? "bg-gray-600 hover:bg-gray-700"
+                              : "bg-black dark:bg-white hover:shadow-lg"
                       }`}
                     >
                       <div className="flex items-center justify-center space-x-2">
