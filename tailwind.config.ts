@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#0070f3",
-        secondary: "#1a1a1a",
+        primary: "#ffffff",
+        secondary: "#000000",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",

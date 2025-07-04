@@ -439,12 +439,12 @@ export function SkillsSection() {
     <section
       id="skills"
       ref={ref}
-      className="relative py-20 bg-slate-50 dark:bg-slate-900 overflow-hidden"
+      className="relative py-20 bg-white dark:bg-black overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
-        <div className="absolute bottom-20 right-20 h-64 w-64 rounded-full bg-purple-500/5 blur-3xl" />
+        <div className="absolute top-20 left-20 h-64 w-64 rounded-full bg-gray-200/10 blur-3xl" />
+        <div className="absolute bottom-20 right-20 h-64 w-64 rounded-full bg-gray-400/10 blur-3xl" />
       </div>
 
       <motion.div
@@ -455,18 +455,16 @@ export function SkillsSection() {
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-            Skills &{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Expertise
+          <h2 className="mb-6 text-4xl font-bold text-black dark:text-white sm:text-5xl">
+            Skills
+            <span className="bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent">
+              Section
             </span>
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-slate-600 dark:text-slate-300">
-            A comprehensive toolkit spanning product management, AI/ML
-            technologies, and full-stack development. Hover over any skill to
-            see detailed experience.
+          <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+            A summary of your skills and expertise.
           </p>
-          <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+          <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full" />
         </motion.div>
 
         {/* Filters */}
@@ -482,8 +480,8 @@ export function SkillsSection() {
                 onClick={() => setActiveCategory(category.key)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeCategory === category.key
-                    ? "bg-white dark:bg-slate-700 text-blue-600 dark:text-white shadow-md"
-                    : "text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-700/50"
+                    ? "bg-white dark:bg-gray-700 text-gray-600 dark:text-white shadow-md"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-700/50"
                 }`}
               >
                 {category.label}
@@ -566,7 +564,7 @@ export function SkillsSection() {
                 >
                   {/* Skill Bubble */}
                   <div
-                    className={`relative overflow-hidden rounded-full bg-white dark:bg-slate-800 shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer border-2 ${skillSize} ${
+                    className={`relative overflow-hidden rounded-full bg-white dark:bg-gray-800 shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer border-2 ${skillSize} ${
                       skill.level === "expert"
                         ? "border-green-400 hover:border-green-500"
                         : skill.level === "proficient"
@@ -581,7 +579,7 @@ export function SkillsSection() {
                     {/* Skill Content */}
                     <div className="flex items-center space-x-1.5">
                       <span className="text-base">{skill.icon}</span>
-                      <span className="font-semibold text-slate-800 dark:text-slate-100 whitespace-nowrap">
+                      <span className="font-semibold text-gray-800 dark:text-gray-100 whitespace-nowrap">
                         {skill.name}
                       </span>
                     </div>
@@ -590,7 +588,7 @@ export function SkillsSection() {
                   {/* Enhanced Hover Tooltip - Smart Positioned Outside */}
                   {hoveredSkill === skill.name && (
                     <div
-                      className={`fixed bg-white dark:bg-slate-800 text-slate-900 dark:text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl text-sm shadow-2xl border border-slate-200 dark:border-slate-600 max-w-xs sm:max-w-sm ${
+                      className={`fixed bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl text-sm shadow-2xl border border-gray-200 dark:border-gray-600 max-w-xs sm:max-w-sm ${
                         isMobile ? "inset-x-4 top-20" : ""
                       }`}
                       style={
@@ -616,7 +614,7 @@ export function SkillsSection() {
                       {isMobile && (
                         <button
                           onClick={() => setHoveredSkill(null)}
-                          className="absolute top-2 right-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                         >
                           ✕
                         </button>
@@ -624,7 +622,7 @@ export function SkillsSection() {
 
                       <div className="space-y-3">
                         {/* Header */}
-                        <div className="flex items-center space-x-3 border-b border-slate-200 dark:border-slate-600 pb-2">
+                        <div className="flex items-center space-x-3 border-b border-gray-200 dark:border-gray-600 pb-2">
                           <span className="text-2xl">{skill.icon}</span>
                           <div>
                             <div className="font-bold text-lg">
@@ -662,13 +660,13 @@ export function SkillsSection() {
                               .map((endorsement, idx) => (
                                 <span
                                   key={idx}
-                                  className="text-xs bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 px-2 py-1 rounded-full"
+                                  className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-2 py-1 rounded-full"
                                 >
                                   {endorsement}
                                 </span>
                               ))}
                             {skill.endorsements.length > 3 && (
-                              <span className="text-xs text-slate-500 dark:text-slate-400">
+                              <span className="text-xs text-gray-500 dark:text-gray-400">
                                 +{skill.endorsements.length - 3} more
                               </span>
                             )}

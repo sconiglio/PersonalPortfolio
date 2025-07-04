@@ -101,7 +101,7 @@ export function ModernNavigation({
       transition={tourActive ? {} : { duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 dark:bg-slate-950/90 backdrop-blur-md shadow-lg"
+          ? "bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -116,10 +116,10 @@ export function ModernNavigation({
           >
             <button
               onClick={() => scrollToSection("#hero")}
-              className="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              className="text-xl font-bold text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200"
             >
               YOUR_NAME
-              <span className="text-blue-600 dark:text-blue-400">.</span>
+              <span className="text-gray-700 dark:text-gray-400">.</span>
             </button>
 
             {/* Job Alert Below Name */}
@@ -130,7 +130,7 @@ export function ModernNavigation({
               className="mt-1"
             >
               <button
-                className="flex items-center space-x-1 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-1.5 py-0.5 text-white shadow-md backdrop-blur-md cursor-pointer hover:scale-105 transition-transform duration-200 text-[10px]"
+                className="flex items-center space-x-1 rounded-full bg-gradient-to-r from-gray-400 to-gray-600 px-1.5 py-0.5 text-white shadow-md backdrop-blur-md cursor-pointer hover:scale-105 transition-transform duration-200 text-[10px]"
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {
@@ -173,8 +173,8 @@ export function ModernNavigation({
                   onClick={() => scrollToSection(section.href)}
                   className={`relative px-2 py-1 text-xs font-medium transition-colors duration-200 rounded-md ${
                     activeSection === section.id
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30"
-                      : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                      ? "text-gray-700 dark:text-gray-400 bg-gray-100 dark:bg-gray-900/30"
+                      : "text-gray-700 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                   }`}
                 >
                   {section.label}
@@ -188,11 +188,11 @@ export function ModernNavigation({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
               onClick={toggleTheme}
-              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-all duration-300 hover:bg-slate-200 dark:hover:bg-slate-700 hover:scale-110"
+              className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-110"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
-                <Sun className="h-5 w-5 text-yellow-400" />
+                <Sun className="h-5 w-5 text-gray-400" />
               ) : (
                 <Moon className="h-5 w-5" />
               )}
@@ -204,7 +204,7 @@ export function ModernNavigation({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors duration-200 hover:bg-slate-200 dark:hover:bg-slate-700 lg:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700 lg:hidden"
               aria-label="Toggle menu"
             >
               <AnimatePresence mode="wait">
@@ -244,7 +244,7 @@ export function ModernNavigation({
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden lg:hidden"
             >
-              <div className="space-y-2 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-4 py-6 rounded-b-2xl shadow-lg">
+              <div className="space-y-2 bg-white/95 dark:bg-black/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 px-4 py-6 rounded-b-2xl shadow-lg">
                 {/* Mobile Job Alert */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -252,7 +252,7 @@ export function ModernNavigation({
                   className="mb-4 flex justify-center"
                 >
                   <button
-                    className="flex items-center space-x-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-3 py-2 text-white shadow-md backdrop-blur-md cursor-pointer hover:scale-105 transition-transform duration-200 text-sm"
+                    className="flex items-center space-x-2 rounded-full bg-gradient-to-r from-gray-400 to-gray-600 px-3 py-2 text-white shadow-md backdrop-blur-md cursor-pointer hover:scale-105 transition-transform duration-200 text-sm"
                     onClick={() => {
                       const contactSection = document.getElementById("contact");
                       if (contactSection) {
@@ -286,8 +286,8 @@ export function ModernNavigation({
                     onClick={() => scrollToSection(section.href)}
                     className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                       activeSection === section.id
-                        ? "bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400"
-                        : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                        ? "bg-gray-100 dark:bg-gray-900/30 text-gray-700 dark:text-gray-400"
+                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                     }`}
                   >
                     {section.label}

@@ -6,8 +6,8 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 17, 24, 39;
-  --background-end-rgb: 17, 24, 39;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,8 +103,8 @@ section {
   position: relative;
   padding: 0.4rem 0.8rem;
   border-radius: 9999px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   transition: all 0.2s ease;
   overflow: hidden;
@@ -116,10 +116,10 @@ section {
 }
 
 .skill-item:hover {
-  background: rgba(30, 41, 59, 0.8);
-  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
 /* Floating bubbles for animation */
@@ -270,18 +270,18 @@ section {
 }
 
 .skill-item[data-level="expert"] {
-  background: rgba(16, 185, 129, 0.2);
-  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .skill-item[data-level="proficient"] {
-  background: rgba(245, 158, 11, 0.2);
-  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .skill-item[data-level="familiar"] {
-  background: rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .skills-legend {
@@ -308,13 +308,13 @@ section {
 }
 
 .legend-dot.expert {
-  background: #10b981;
+  background: #ffffff;
 }
 .legend-dot.proficient {
-  background: #f59e0b;
+  background: #cccccc;
 }
 .legend-dot.familiar {
-  background: #3b82f6;
+  background: #999999;
 }
 
 /* Section styling for projects, recommendations, contact */
@@ -336,12 +336,12 @@ section {
   background:
     radial-gradient(
       circle at 30% 20%,
-      rgba(59, 130, 246, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 70% 80%,
-      rgba(139, 92, 246, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 0%,
       transparent 50%
     );
   pointer-events: none;
@@ -360,7 +360,7 @@ section {
   font-weight: 800;
   text-align: center;
   margin-bottom: 1.25rem;
-  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  background: linear-gradient(135deg, #ffffff, #cccccc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -387,34 +387,34 @@ section {
 
 /* Project card styling */
 .project-card {
-  background: rgba(30, 41, 59, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s;
   backdrop-filter: blur(10px);
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact form styling */
 .contact-form {
-  background: rgba(30, 41, 59, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 1.5rem;
   padding: 3rem;
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   max-width: 600px;
   margin: 0 auto;
 }
 
 .form-input {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   padding: 1rem;
   color: white;
@@ -422,14 +422,14 @@ section {
 }
 
 .form-input:focus {
-  border-color: #60a5fa;
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
   outline: none;
 }
 
 .form-button {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  color: white;
+  background: linear-gradient(135deg, #ffffff, #cccccc);
+  color: black;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -440,13 +440,13 @@ section {
 
 .form-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 .timeline-connector-horizontal {
   width: 3rem;
   height: 2px;
-  background: linear-gradient(to right, #3b82f6, #1d4ed8);
+  background: linear-gradient(to right, #ffffff, #cccccc);
   margin: 0.5rem 0;
   position: relative;
 }
@@ -458,9 +458,9 @@ section {
   right: -1px;
   width: 4px;
   height: 4px;
-  background: #3b82f6;
+  background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 8px #3b82f6;
+  box-shadow: 0 0 8px #ffffff;
 }
 
 /* Timeline: static, all bubbles on one line, connectors between */

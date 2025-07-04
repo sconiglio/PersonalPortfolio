@@ -351,13 +351,13 @@ export function TimelineSection({
   const getCategoryColor = (category?: string) => {
     switch (category) {
       case "product":
-        return "from-blue-500 to-purple-500";
+        return "from-gray-400 to-gray-600";
       case "engineering":
-        return "from-green-500 to-blue-500";
+        return "from-gray-400 to-gray-600";
       case "retail":
-        return "from-orange-500 to-red-500";
+        return "from-gray-400 to-gray-600";
       default:
-        return "from-slate-500 to-slate-600";
+        return "from-gray-400 to-gray-600";
     }
   };
 
@@ -365,12 +365,12 @@ export function TimelineSection({
     <section
       id="timeline"
       ref={ref}
-      className="relative py-20 bg-white dark:bg-slate-950 overflow-hidden"
+      className="relative py-20 bg-white dark:bg-black overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 h-64 w-64 rounded-full bg-blue-500/5 blur-3xl" />
-        <div className="absolute bottom-20 left-20 h-64 w-64 rounded-full bg-purple-500/5 blur-3xl" />
+        <div className="absolute top-20 right-20 h-64 w-64 rounded-full bg-gray-200/10 blur-3xl" />
+        <div className="absolute bottom-20 left-20 h-64 w-64 rounded-full bg-gray-400/10 blur-3xl" />
       </div>
 
       <motion.div
@@ -381,20 +381,16 @@ export function TimelineSection({
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-            Professional{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Journey
+          <h2 className="mb-6 text-4xl font-bold text-black dark:text-white sm:text-5xl">
+            Timeline
+            <span className="bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent">
+              Section
             </span>
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-slate-600 dark:text-slate-300">
-            From software engineering to AI product management.
-            <br />
-            <span className="font-bold">
-              11 career milestones, 16 projects, 3 degrees
-            </span>
+          <p className="mx-auto max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+            A summary of your education and experience.
           </p>
-          <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+          <div className="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full" />
         </motion.div>
 
         {/* Filter Controls */}
@@ -408,8 +404,8 @@ export function TimelineSection({
                 whileTap={{ scale: 0.95 }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border backdrop-blur-sm ${
                   activeCategory === category.key
-                    ? "bg-blue-600/20 border-blue-500/80 text-blue-600 dark:text-blue-400 shadow-lg shadow-blue-500/20"
-                    : "bg-white/50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50"
+                    ? "bg-gray-600/20 border-gray-500/80 text-gray-600 dark:text-gray-400 shadow-lg shadow-gray-500/20"
+                    : "bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50"
                 }`}
               >
                 {category.label}
@@ -425,7 +421,7 @@ export function TimelineSection({
         >
           {/* Education Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+            <h3 className="text-2xl font-bold text-black dark:text-white mb-8 text-center">
               Education
             </h3>
             <div className="space-y-6">
@@ -445,7 +441,7 @@ export function TimelineSection({
                     >
                       <motion.div
                         onClick={() => toggleCard(cardId)}
-                        className="group relative cursor-pointer rounded-xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 shadow-md border border-slate-200/50 dark:border-slate-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:scale-[1.02] hover:bg-white dark:hover:bg-slate-800"
+                        className="group relative cursor-pointer rounded-xl bg-white/80 dark:bg-black/80 backdrop-blur-sm p-4 shadow-md border border-gray-200/50 dark:border-gray-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/10 hover:scale-[1.02] hover:bg-white dark:hover:bg-black"
                       >
                         {/* Header */}
                         <div className="flex items-center space-x-3">
@@ -458,15 +454,15 @@ export function TimelineSection({
                             />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+                            <h4 className="text-base font-bold text-black dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors line-clamp-1">
                               {item.title}
                             </h4>
                             <div className="flex items-center space-x-2">
-                              <p className="text-sm font-medium text-slate-600 dark:text-slate-400 line-clamp-1">
+                              <p className="text-sm font-medium text-gray-600 dark:text-gray-400 line-clamp-1">
                                 {item.org}
                               </p>
-                              <span className="text-xs text-slate-400">•</span>
-                              <p className="text-xs text-slate-500 dark:text-slate-500">
+                              <span className="text-xs text-gray-400">•</span>
+                              <p className="text-xs text-gray-500 dark:text-gray-500">
                                 {item.date}
                               </p>
                             </div>
@@ -475,7 +471,7 @@ export function TimelineSection({
                             className={`transform transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                           >
                             <svg
-                              className="w-4 h-4 text-slate-400"
+                              className="w-4 h-4 text-gray-400"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -500,8 +496,8 @@ export function TimelineSection({
                                 key={idx}
                                 className="flex items-start space-x-2"
                               >
-                                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0" />
-                                <p className="text-sm text-slate-600 dark:text-slate-300">
+                                <div className="w-1.5 h-1.5 rounded-full bg-gray-500 mt-2 flex-shrink-0" />
+                                <p className="text-sm text-gray-600 dark:text-gray-300">
                                   {detail}
                                 </p>
                               </div>
@@ -519,7 +515,7 @@ export function TimelineSection({
           <motion.div variants={itemVariants} className="relative">
             <h3
               id="work-experience-title"
-              className="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center"
+              className="text-2xl font-bold text-black dark:text-white mb-8 text-center"
             >
               Work Experience
             </h3>
@@ -529,7 +525,7 @@ export function TimelineSection({
                 ref={scrollContainerRef}
                 onScroll={handleScroll}
                 onWheel={handleWheel}
-                className="relative space-y-6 overflow-y-auto max-h-[600px] scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700 scrollbar-track-transparent pr-4 -mr-4"
+                className="relative space-y-6 overflow-y-auto max-h-[600px] scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent pr-4 -mr-4"
               >
                 {filteredTimeline
                   .filter((item) => item.type === "experience")
@@ -547,12 +543,12 @@ export function TimelineSection({
                       >
                         <motion.div
                           onClick={() => toggleCard(cardId)}
-                          className="group relative cursor-pointer rounded-2xl bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1"
+                          className="group relative cursor-pointer rounded-2xl bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-black p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/10 hover:-translate-y-1"
                         >
                           {/* Category Badge */}
                           {item.category && (
                             <div
-                              className={`absolute -top-2 -right-2 px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getCategoryColor(item.category)}`}
+                              className={`absolute -top-2 -right-2 px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r from-gray-400 to-gray-600`}
                             >
                               {item.category}
                             </div>
@@ -569,13 +565,13 @@ export function TimelineSection({
                               />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h4 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                              <h4 className="text-lg font-bold text-black dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
                                 {item.title}
                               </h4>
-                              <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
+                              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
                                 {item.org}
                               </p>
-                              <p className="text-xs text-slate-500 dark:text-slate-500">
+                              <p className="text-xs text-gray-500 dark:text-gray-500">
                                 {item.date}
                               </p>
                             </div>
@@ -583,7 +579,7 @@ export function TimelineSection({
                               className={`transform transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                             >
                               <svg
-                                className="w-5 h-5 text-slate-400"
+                                className="w-5 h-5 text-gray-400"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -608,8 +604,8 @@ export function TimelineSection({
                                   key={idx}
                                   className="flex items-start space-x-2"
                                 >
-                                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-                                  <p className="text-sm text-slate-600 dark:text-slate-300">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-gray-500 mt-2 flex-shrink-0" />
+                                  <p className="text-sm text-gray-600 dark:text-gray-300">
                                     {bullet}
                                   </p>
                                 </div>
@@ -628,9 +624,9 @@ export function TimelineSection({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-slate-600 dark:text-slate-300 z-20 pointer-events-none"
+                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-gray-600 dark:text-gray-300 z-20 pointer-events-none"
                 >
-                  <div className="flex flex-col items-center bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full px-4 py-3 shadow-xl border border-slate-200/50 dark:border-slate-700/50">
+                  <div className="flex flex-col items-center bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full px-4 py-3 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
                     <span className="text-xs font-semibold mb-1">
                       Scroll for more
                     </span>

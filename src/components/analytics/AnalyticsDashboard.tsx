@@ -87,23 +87,23 @@ export default function AnalyticsDashboard() {
   const getColorClasses = (color: string, isActive: boolean) => {
     const colors = {
       blue: isActive
-        ? "bg-blue-600 text-white"
-        : "text-blue-400 hover:bg-blue-900/30",
+        ? "bg-gray-700 text-white"
+        : "text-gray-400 hover:bg-gray-900/30",
       purple: isActive
-        ? "bg-purple-600 text-white"
-        : "text-purple-400 hover:bg-purple-900/30",
+        ? "bg-gray-700 text-white"
+        : "text-gray-400 hover:bg-gray-900/30",
       green: isActive
-        ? "bg-green-600 text-white"
-        : "text-green-400 hover:bg-green-900/30",
+        ? "bg-gray-700 text-white"
+        : "text-gray-400 hover:bg-gray-900/30",
       orange: isActive
-        ? "bg-orange-600 text-white"
-        : "text-orange-400 hover:bg-orange-900/30",
+        ? "bg-gray-700 text-white"
+        : "text-gray-400 hover:bg-gray-900/30",
       teal: isActive
-        ? "bg-teal-600 text-white"
-        : "text-teal-400 hover:bg-teal-900/30",
+        ? "bg-gray-700 text-white"
+        : "text-gray-400 hover:bg-gray-900/30",
       indigo: isActive
-        ? "bg-indigo-600 text-white"
-        : "text-indigo-400 hover:bg-indigo-900/30",
+        ? "bg-gray-700 text-white"
+        : "text-gray-400 hover:bg-gray-900/30",
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
@@ -138,23 +138,23 @@ export default function AnalyticsDashboard() {
           {/* Stats Summary */}
           <div className="flex items-center gap-6 text-sm">
             <div className="flex items-center gap-2">
-              <FiUsers className="h-4 w-4 text-blue-400" />
+              <FiUsers className="h-4 w-4 text-gray-400" />
               <span className="text-gray-400">Sessions:</span>
-              <span className="font-bold text-blue-400">
+              <span className="font-bold text-gray-400">
                 {analytics.totalSessions}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <FiMousePointer className="h-4 w-4 text-green-400" />
+              <FiMousePointer className="h-4 w-4 text-gray-400" />
               <span className="text-gray-400">Clicks:</span>
-              <span className="font-bold text-green-400">
+              <span className="font-bold text-gray-400">
                 {analytics.totalButtonClicks}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <FiTarget className="h-4 w-4 text-orange-400" />
+              <FiTarget className="h-4 w-4 text-gray-400" />
               <span className="text-gray-400">Tours:</span>
-              <span className="font-bold text-orange-400">
+              <span className="font-bold text-gray-400">
                 {analytics.totalTourInteractions}
               </span>
             </div>
@@ -166,7 +166,7 @@ export default function AnalyticsDashboard() {
             <div className="relative">
               <button
                 onClick={() => setShowExportMenu(!showExportMenu)}
-                className="flex items-center gap-2 px-3 py-2 bg-green-600/20 text-green-400 rounded-lg hover:bg-green-600/30 transition-colors text-sm"
+                className="flex items-center gap-2 px-3 py-2 bg-gray-700/20 text-gray-400 rounded-lg hover:bg-gray-700/30 transition-colors text-sm"
               >
                 <FiDownload className="h-4 w-4" />
                 Export
@@ -197,7 +197,7 @@ export default function AnalyticsDashboard() {
                     }}
                     className="w-full px-4 py-2 text-left text-sm text-white hover:bg-gray-700 flex items-center gap-2"
                   >
-                    <FiRefreshCw className="h-4 w-4 text-blue-400" />
+                    <FiRefreshCw className="h-4 w-4 text-gray-400" />
                     Smart Update & Export
                   </button>
                 </div>
@@ -253,7 +253,7 @@ Visit the main site to generate device analytics data!`);
                 );
                 analytics.forceRefresh();
               }}
-              className="flex items-center gap-2 px-3 py-2 bg-orange-600/20 text-orange-400 rounded-lg hover:bg-orange-600/30 transition-colors text-sm"
+              className="flex items-center gap-2 px-3 py-2 bg-gray-700/20 text-gray-400 rounded-lg hover:bg-gray-700/30 transition-colors text-sm"
             >
               🐛 Debug
             </button>
@@ -261,7 +261,7 @@ Visit the main site to generate device analytics data!`);
             {/* Cache Stats Toggle */}
             <button
               onClick={() => setShowCacheStats(!showCacheStats)}
-              className="flex items-center gap-2 px-3 py-2 bg-purple-600/20 text-purple-400 rounded-lg hover:bg-purple-600/30 transition-colors text-sm"
+              className="flex items-center gap-2 px-3 py-2 bg-gray-700/20 text-gray-400 rounded-lg hover:bg-gray-700/30 transition-colors text-sm"
             >
               <FiDatabase className="h-4 w-4" />
               Cache
@@ -271,7 +271,7 @@ Visit the main site to generate device analytics data!`);
             <select
               value={timeRange}
               onChange={(e) => setTimeRange(e.target.value as any)}
-              className="bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm focus:ring-2 focus:ring-blue-500"
+              className="bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm focus:ring-2 focus:ring-gray-500"
             >
               <option value="1d">Last 24 Hours</option>
               <option value="7d">Last 7 Days</option>
@@ -283,22 +283,22 @@ Visit the main site to generate device analytics data!`);
 
         {/* Cache Stats Panel */}
         {showCacheStats && (
-          <div className="mt-4 p-4 bg-gray-700 rounded-lg border-l-4 border-purple-500">
+          <div className="mt-4 p-4 bg-gray-700 rounded-lg border-l-4 border-gray-500">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-lg font-semibold text-purple-400 flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-400 flex items-center gap-2">
                 <FiDatabase className="h-5 w-5" />
                 Cache Statistics
               </h3>
               <div className="flex gap-2">
                 <button
                   onClick={() => analytics.forceRefresh()}
-                  className="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white text-xs rounded transition-colors"
+                  className="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white text-xs rounded transition-colors"
                 >
                   Smart Refresh
                 </button>
                 <button
                   onClick={() => analytics.clearCache()}
-                  className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"
+                  className="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white text-xs rounded transition-colors"
                 >
                   Clear Cache
                 </button>
@@ -309,7 +309,7 @@ Visit the main site to generate device analytics data!`);
 
             {/* Export Stats */}
             <div className="mt-4 pt-4 border-t border-gray-600">
-              <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center gap-2">
+              <h4 className="text-sm font-semibold text-gray-400 mb-2 flex items-center gap-2">
                 <FiDownload className="h-4 w-4" />
                 Export Status
               </h4>
@@ -343,7 +343,7 @@ Visit the main site to generate device analytics data!`);
         {analytics.loading && (
           <div className="flex items-center justify-center py-16">
             <div className="flex items-center gap-3">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-500"></div>
               <span className="text-lg">Loading analytics data...</span>
             </div>
           </div>
@@ -386,7 +386,7 @@ Visit the main site to generate device analytics data!`);
               </p>
               <button
                 onClick={() => analytics.refreshData()}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
               >
                 Refresh Data
               </button>
@@ -412,10 +412,10 @@ function ExportStatsDisplay({ stats }: { stats: any }) {
   const daysSince = stats.daysSinceExport;
   const statusColor =
     daysSince <= 7
-      ? "text-green-400"
+      ? "text-gray-400"
       : daysSince <= 30
-        ? "text-yellow-400"
-        : "text-red-400";
+        ? "text-gray-400"
+        : "text-gray-400";
 
   return (
     <div className="space-y-2">
@@ -425,16 +425,16 @@ function ExportStatsDisplay({ stats }: { stats: any }) {
           <span
             className={`text-xs px-2 py-1 rounded ${
               daysSince <= 7
-                ? "bg-green-600 text-green-100"
+                ? "bg-gray-600 text-gray-100"
                 : daysSince <= 30
-                  ? "bg-yellow-600 text-yellow-100"
-                  : "bg-red-600 text-red-100"
+                  ? "bg-gray-600 text-gray-100"
+                  : "bg-gray-600 text-gray-100"
             }`}
           >
             {daysSince === 0 ? "Today" : `${daysSince} days ago`}
           </span>
         </div>
-        <div className="text-lg font-bold text-blue-400 mb-1">
+        <div className="text-lg font-bold text-gray-400 mb-1">
           {stats.totalRecords} records
         </div>
         <div className="text-xs text-gray-400">
@@ -480,14 +480,14 @@ function CacheStatsDisplay({ stats }: { stats: any }) {
                 <span
                   className={`text-xs px-2 py-1 rounded ${
                     data.isValid
-                      ? "bg-green-600 text-green-100"
-                      : "bg-red-600 text-red-100"
+                      ? "bg-gray-600 text-gray-100"
+                      : "bg-gray-600 text-gray-100"
                   }`}
                 >
                   {data.isValid ? "Valid" : "Stale"}
                 </span>
               </div>
-              <div className="text-2xl font-bold text-blue-400 mb-1">
+              <div className="text-2xl font-bold text-gray-400 mb-1">
                 {data.count}
               </div>
               <div className="text-xs text-gray-400">

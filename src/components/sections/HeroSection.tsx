@@ -41,32 +41,32 @@ export function HeroSection({
     {
       text: "Product Strategy",
       mobileText: "Product Strategy",
-      gradient: "from-gray-400 via-gray-500 to-gray-600",
+      gradient: "from-white via-gray-300 to-gray-500",
     },
     {
       text: "User Experience",
       mobileText: "User Experience",
-      gradient: "from-gray-400 via-gray-500 to-gray-600",
+      gradient: "from-white via-gray-300 to-gray-500",
     },
     {
       text: "Business Growth",
       mobileText: "Business Growth",
-      gradient: "from-gray-400 via-gray-500 to-gray-600",
+      gradient: "from-white via-gray-300 to-gray-500",
     },
     {
       text: "Market Analysis",
       mobileText: "Market Analysis",
-      gradient: "from-gray-400 via-gray-500 to-gray-600",
+      gradient: "from-white via-gray-300 to-gray-500",
     },
     {
       text: "Team Leadership",
       mobileText: "Team Leadership",
-      gradient: "from-gray-400 via-gray-500 to-gray-600",
+      gradient: "from-white via-gray-300 to-gray-500",
     },
     {
       text: "Data Insights",
       mobileText: "Data Insights",
-      gradient: "from-gray-400 via-gray-500 to-gray-600",
+      gradient: "from-white via-gray-300 to-gray-500",
     },
   ];
 
@@ -152,13 +152,13 @@ export function HeroSection({
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black"
     >
       {/* Simplified Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-purple-500/10 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 h-60 w-60 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-blue-400/5 to-purple-400/5 blur-2xl" />
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 h-60 w-60 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-white/5 to-gray-500/5 blur-2xl" />
 
         {/* Static Background Elements - No animations for performance */}
         {!isMobile && !prefersReducedMotion && (
@@ -219,7 +219,7 @@ export function HeroSection({
           <motion.div
             variants={pulseVariants}
             animate="animate"
-            className="relative h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 overflow-hidden rounded-full border-4 border-blue-400/50 bg-white shadow-2xl shadow-blue-500/25 cursor-pointer group"
+            className="relative h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 overflow-hidden rounded-full border-4 border-white/50 bg-white shadow-2xl shadow-white/25 cursor-pointer group"
             onClick={() => onCatsToggle?.(!showCats)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -231,10 +231,10 @@ export function HeroSection({
               className="object-cover transition-all duration-300 group-hover:brightness-110"
               priority
             />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-500/20 to-transparent" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-white/20 to-transparent" />
 
             {/* Subtle hint overlay */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-gray-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.div>
 
           {/* Grey Cat - Right Side */}
@@ -347,7 +347,7 @@ export function HeroSection({
             }}
             className="flex items-center space-x-1 sm:space-x-2 rounded-full bg-white/5 px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
-            <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-green-400" />
+            <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-white" />
             <span className="whitespace-nowrap">Business Degree</span>
           </button>
           <button
@@ -357,7 +357,7 @@ export function HeroSection({
             }}
             className="flex items-center space-x-1 sm:space-x-2 rounded-full bg-white/5 px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
-            <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-blue-400" />
+            <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-gray-300" />
             <span className="whitespace-nowrap">
               Product Management Experience
             </span>
@@ -368,7 +368,7 @@ export function HeroSection({
             rel="noopener noreferrer"
             className="flex items-center space-x-1 sm:space-x-2 rounded-full bg-white/5 px-2 sm:px-4 py-1 sm:py-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
-            <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-purple-400" />
+            <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-gray-500" />
             <span className="whitespace-nowrap">Product Leader</span>
           </Link>
         </motion.div>
@@ -382,7 +382,7 @@ export function HeroSection({
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-gray-600 to-gray-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-gray-700 hover:to-gray-800 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25"
+            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-white to-gray-300 px-6 sm:px-8 py-3 sm:py-4 text-black font-semibold transition-all duration-300 hover:from-gray-200 hover:to-gray-400 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
             onClick={() =>
               trackButtonClick?.("download_resume", "Download Resume")
             }
@@ -398,7 +398,7 @@ export function HeroSection({
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-gray-600 to-gray-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold transition-all duration-300 hover:from-gray-700 hover:to-gray-800 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25"
+            className="group flex items-center justify-center rounded-lg bg-gradient-to-r from-white to-gray-300 px-6 sm:px-8 py-3 sm:py-4 text-black font-semibold transition-all duration-300 hover:from-gray-200 hover:to-gray-400 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
           >
             <span className="mr-2 text-lg">🎯</span>
             Take Product Tour
