@@ -409,11 +409,11 @@ export function SkillsSection() {
   const getLevelBadgeColor = (level: string) => {
     switch (level) {
       case "expert":
-        return "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400";
+        return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400";
       case "proficient":
-        return "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400";
+        return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400";
       case "familiar":
-        return "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400";
+        return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400";
       default:
         return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400";
     }
@@ -423,16 +423,16 @@ export function SkillsSection() {
     if (isActive) {
       switch (level) {
         case "expert":
-          return "bg-green-600/20 border-green-500/80 text-green-600 dark:text-green-400 shadow-lg shadow-green-500/20";
+          return "bg-gray-600/20 border-gray-500/80 text-gray-600 dark:text-gray-400 shadow-lg shadow-gray-500/20";
         case "proficient":
-          return "bg-orange-600/20 border-orange-500/80 text-orange-600 dark:text-orange-400 shadow-lg shadow-orange-500/20";
+          return "bg-gray-600/20 border-gray-500/80 text-gray-600 dark:text-gray-400 shadow-lg shadow-gray-500/20";
         case "familiar":
-          return "bg-blue-600/20 border-blue-500/80 text-blue-600 dark:text-blue-400 shadow-lg shadow-blue-500/20";
+          return "bg-gray-600/20 border-gray-500/80 text-gray-600 dark:text-gray-400 shadow-lg shadow-gray-500/20";
         default:
-          return "bg-blue-600/20 border-blue-500/80 text-blue-600 dark:text-blue-400 shadow-lg shadow-blue-500/20";
+          return "bg-gray-600/20 border-gray-500/80 text-gray-600 dark:text-gray-400 shadow-lg shadow-gray-500/20";
       }
     }
-    return "bg-white/50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50";
+    return "bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50";
   };
 
   return (
@@ -566,13 +566,13 @@ export function SkillsSection() {
                   <div
                     className={`relative overflow-hidden rounded-full bg-white dark:bg-gray-800 shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer border-2 ${skillSize} ${
                       skill.level === "expert"
-                        ? "border-green-400 hover:border-green-500"
+                        ? "border-gray-400 hover:border-gray-500"
                         : skill.level === "proficient"
-                          ? "border-orange-400 hover:border-orange-500"
-                          : "border-blue-400 hover:border-blue-500"
+                          ? "border-gray-400 hover:border-gray-500"
+                          : "border-gray-400 hover:border-gray-500"
                     } ${
                       !isMobile && !prefersReducedMotion
-                        ? "hover:shadow-xl hover:-translate-y-2 hover:scale-110 hover:shadow-green-500/20"
+                        ? "hover:shadow-xl hover:-translate-y-2 hover:scale-110 hover:shadow-gray-500/20"
                         : "hover:shadow-lg"
                     }`}
                   >
@@ -641,7 +641,7 @@ export function SkillsSection() {
 
                         {/* Achievement */}
                         <div>
-                          <div className="font-semibold text-sm mb-1 text-yellow-400 dark:text-yellow-600">
+                          <div className="font-semibold text-sm mb-1 text-gray-600 dark:text-gray-400">
                             🏆 Key Achievement:
                           </div>
                           <div className="text-sm leading-relaxed">
@@ -651,7 +651,7 @@ export function SkillsSection() {
 
                         {/* Endorsements */}
                         <div>
-                          <div className="font-semibold text-sm mb-2 text-blue-400 dark:text-blue-600">
+                          <div className="font-semibold text-sm mb-2 text-gray-600 dark:text-gray-400">
                             ✨ Endorsed by:
                           </div>
                           <div className="flex flex-wrap gap-1">
