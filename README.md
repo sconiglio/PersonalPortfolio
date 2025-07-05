@@ -43,15 +43,43 @@ This comprehensive guide walks you through every step from initial setup to live
 
 ## ⚡ Quick Start (5 minutes)
 
-### Step 1: Get the Template
+### Step 1: Fork and Clone the Template
+
+1. **Fork the repository**:
+   - Go to [https://github.com/LawrenceHua/modern-portfolio-template](https://github.com/LawrenceHua/modern-portfolio-template)
+   - Click the **"Fork"** button in the top-right corner
+   - This creates your own copy under your GitHub account
+
+2. **Clone your fork**:
+
+   ```bash
+   # Clone your forked repository (replace YOUR_USERNAME with your GitHub username)
+   git clone https://github.com/YOUR_USERNAME/modern-portfolio-template.git
+   cd modern-portfolio-template
+
+   # Install dependencies
+   npm install
+   ```
+
+3. **Set up upstream** (optional, to get updates from the original template):
+   ```bash
+   git remote add upstream https://github.com/LawrenceHua/modern-portfolio-template.git
+   ```
+
+**💡 Pro Tip**: Forking gives you your own repository that you can customize freely. You can always get updates from the original template later if needed.
+
+**🔄 Getting Updates** (if you set up upstream):
 
 ```bash
-# Clone the template
-git clone https://github.com/LawrenceHua/modern-portfolio-template.git
-cd modern-portfolio-template
+# Fetch updates from the original template
+git fetch upstream
 
-# Install dependencies
-npm install
+# Merge updates into your main branch
+git checkout main
+git merge upstream/main
+
+# Push updates to your fork
+git push origin main
 ```
 
 ### Step 2: Basic Configuration
@@ -341,7 +369,7 @@ After the initial analysis, use these commands:
 
 ### **Deploy to Vercel (Recommended)**
 
-1. **Push to GitHub**:
+1. **Push to your fork**:
 
    ```bash
    git add .
@@ -351,7 +379,7 @@ After the initial analysis, use these commands:
 
 2. **Connect to Vercel**:
    - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
+   - Import your **forked** GitHub repository
    - Vercel will auto-detect Next.js and deploy
 
 3. **Add Environment Variables**:
