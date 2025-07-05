@@ -20,20 +20,24 @@ This guide walks you through every step from initial setup to live deployment, i
 
 ### Prerequisites
 
+**Required Software:**
+
 - **Node.js 18+** ([Download here](https://nodejs.org))
 - **Git** ([Download here](https://git-scm.com))
-- **GitHub account** (for deployment)
 - **Cursor AI Editor** ([Download here](https://cursor.com/downloads)) - AI-powered code editor for faster development
 
-#### **Required API Accounts & Keys**
+**Required Accounts & API Keys:**
 
-You'll need to sign up for these services to enable full functionality:
+- **GitHub account** ([Sign up here](https://github.com/signup)) - for repository hosting and deployment
+- **Vercel account** ([Sign up here](https://vercel.com/signup)) - for free hosting and deployment
+- **Firebase account** ([Sign up here](https://console.firebase.google.com)) - for analytics and tracking
+- **Resend account** ([Sign up here](https://resend.com/signup)) - for email service
+- **OpenAI account** ([Sign up here](https://platform.openai.com/signup)) - for AI chatbot (optional but recommended)
+- **Google Cloud account** ([Sign up here](https://console.cloud.google.com)) - for Google Calendar integration
 
-- **Firebase Account** ([Sign up here](https://console.firebase.google.com)) - For analytics and visitor tracking
-- **Resend Account** ([Sign up here](https://resend.com)) - For email contact forms
-- **OpenAI Account** ([Sign up here](https://platform.openai.com)) - For AI chatbot functionality
-- **Google Cloud Account** ([Sign up here](https://console.cloud.google.com)) - For Google Calendar integration
-- **Vercel Account** ([Sign up here](https://vercel.com)) - For deployment (optional but recommended)
+**Student Benefits:**
+
+- **Cursor Pro (Free for students)** - [Verify student status here](https://cursor.com/students) for 1 year of free Pro access
 
 ### Step 1: Get the Template
 
@@ -81,7 +85,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your portfolio!
 
 ## 🔐 API Keys Setup
 
-Create a `.env.local` file using `.env.example` as a template. **Make sure you've signed up for all the required accounts listed in the prerequisites section above.** These services are **optional** but recommended for full functionality.
+Create a `.env.local` file using `.env.example` as a template. These services are **optional** but recommended for full functionality.
 
 ### **Firebase (Analytics & Tracking)** 🔥
 
@@ -253,11 +257,11 @@ Use these prompts with your AI assistant for rapid customization:
 
 ## 💻 Using Cursor AI Editor
 
-[Cursor](https://cursor.com) is an AI-powered code editor that can accelerate your development. **Make sure you've installed Cursor from the prerequisites section above.**
+[Cursor](https://cursor.com) is an AI-powered code editor that can accelerate your development.
 
 ### **Setup Cursor**
 
-1. **Download Cursor**: Visit [cursor.com/downloads](https://www.cursor.com/downloads) (if not already installed)
+1. **Download Cursor**: Visit [cursor.com/downloads](https://www.cursor.com/downloads)
 2. **Verify Student Status**: Go to [cursor.com/students](https://cursor.com/students) for free Pro access
 3. **Open Project**: File → Open Folder → Select your portfolio folder
 
