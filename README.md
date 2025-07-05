@@ -2,15 +2,15 @@
 
 **Build and deploy your professional portfolio in under 1 hour using this modern template.**
 
-This comprehensive guide walks you through every step from initial setup to live deployment, including API integrations, customization, and best practices.
+This comprehensive guide walks you through every step from initial setup to live deployment, including AI-powered customization with Cursor.
 
 ## 📋 Table of Contents
 
 - [🎯 Prerequisites](#-prerequisites)
+- [💻 Cursor AI Workflow (Recommended)](#-cursor-ai-workflow-recommended)
 - [⚡ Quick Start (5 minutes)](#-quick-start-5-minutes)
 - [🔐 API Keys Setup](#-api-keys-setup)
 - [🎨 Complete Customization](#-complete-customization)
-- [💻 Using Cursor AI Editor](#-using-cursor-ai-editor)
 - [🚀 Deployment](#-deployment)
 - [📊 Advanced Features](#-advanced-features)
 - [🛠️ Troubleshooting](#️-troubleshooting)
@@ -38,6 +38,105 @@ This comprehensive guide walks you through every step from initial setup to live
 **Student Benefits:**
 
 - **Cursor Pro (Free for students)** - [Verify student status here](https://cursor.com/students) for 1 year of free Pro access
+
+---
+
+## 💻 Cursor AI Workflow (Recommended)
+
+**The fastest way to build your portfolio using AI assistance.**
+
+### **Step 1: Open Cursor and Start Fresh**
+
+1. **Download and install Cursor** from [cursor.com/downloads](https://cursor.com/downloads)
+2. **Verify student status** at [cursor.com/students](https://cursor.com/students) for free Pro access
+3. **Open Cursor** and start a new chat session
+
+### **Step 2: First Cursor Command - Fork and Setup**
+
+Copy and paste this command into Cursor:
+
+```
+I want to build my personal portfolio. Please help me:
+
+1. Fork the repository: https://github.com/LawrenceHua/modern-portfolio-template
+2. Clone my forked repository to my local machine
+3. Install dependencies
+4. Start the development server
+5. Analyze the codebase structure
+6. Explain what each section does and how to customize it
+
+Please provide the exact commands I need to run and guide me through the process.
+```
+
+### **Step 3: Cursor Analysis and Customization**
+
+After the initial setup, use this comprehensive prompt:
+
+```
+/analyze
+
+I'm building my personal portfolio using this Next.js template. Please analyze the codebase and help me customize it with my personal information.
+
+**My Career Information:**
+- **Name**: [Your Full Name]
+- **Current Role**: [Your Job Title]
+- **Years of Experience**: [X years]
+- **Industry**: [Your Industry - e.g., Software Development, Product Management, Design, etc.]
+- **Key Skills**: [List your top 5-8 technical and soft skills]
+- **Education**: [Your degree(s) and university/college]
+- **Location**: [Your city, state/country]
+- **Professional Summary**: [2-3 sentences about your background and expertise]
+
+**My Projects** (list 3-5 key projects):
+1. **Project Name**: [Brief description, technologies used, outcomes/impact]
+2. **Project Name**: [Brief description, technologies used, outcomes/impact]
+3. **Project Name**: [Brief description, technologies used, outcomes/impact]
+
+**Work Experience** (list your recent roles):
+1. **Company Name** - [Role] (Year-Year): [Key achievements and responsibilities]
+2. **Company Name** - [Role] (Year-Year): [Key achievements and responsibilities]
+
+**Contact Information**:
+- **Email**: [your.email@example.com]
+- **LinkedIn**: [linkedin.com/in/yourprofile]
+- **GitHub**: [github.com/yourusername]
+- **Portfolio/Website**: [if you have one]
+
+**Design Preferences**:
+- **Color Scheme**: [e.g., Blue/Gray, Green/Earth tones, Purple/White, etc.]
+- **Style**: [e.g., Minimalist, Modern, Creative, Professional, etc.]
+- **Special Features**: [Any specific sections or features you want to highlight]
+
+Please help me:
+1. Update all placeholder content with my information
+2. Customize the color scheme and styling to match my preferences
+3. Optimize the content for my specific role and industry
+4. Ensure the portfolio reflects my professional brand
+5. Add any missing sections that would be relevant for my background
+6. Set up environment variables for advanced features
+7. Test the portfolio locally
+8. Deploy to Vercel
+9. Provide me with the final live URL
+
+Please execute these changes step by step and explain what you're doing at each stage.
+```
+
+### **Step 4: Cursor Deployment Command**
+
+Once customization is complete, use this command:
+
+```
+Now help me deploy my portfolio to Vercel:
+
+1. Push all changes to my GitHub repository
+2. Connect my repository to Vercel
+3. Configure environment variables in Vercel
+4. Deploy the portfolio
+5. Provide me with the live URL
+6. Test all functionality on the live site
+
+Please guide me through each step and provide the exact commands and actions needed.
+```
 
 ---
 
@@ -231,6 +330,102 @@ export const siteConfig = {
 };
 ```
 
+### **Content Sections Customization**
+
+#### **Hero Section**
+
+```typescript
+hero: {
+  headline: "Hi, I'm Your Name",
+  subtitle: "I help companies build better products",
+  description: "Your professional summary and value proposition",
+  ctaText: "View My Work",
+  ctaLink: "#projects",
+},
+```
+
+#### **About Section**
+
+```typescript
+about: {
+  title: "About Me",
+  content: `Your professional story and background...`,
+  highlights: [
+    "5+ years in your field",
+    "Led teams of 10+ people",
+    "Increased efficiency by 40%",
+    "Launched 3 successful projects",
+  ],
+},
+```
+
+#### **Skills Section**
+
+```typescript
+skills: [
+  {
+    category: "Technical Skills",
+    items: [
+      "Your Technical Skill 1",
+      "Your Technical Skill 2",
+      "Your Technical Skill 3",
+    ],
+  },
+  {
+    category: "Soft Skills",
+    items: [
+      "Leadership",
+      "Communication",
+      "Problem Solving",
+      "Strategic Thinking",
+    ],
+  },
+  {
+    category: "Tools & Platforms",
+    items: [
+      "Tool 1",
+      "Tool 2",
+      "Tool 3",
+      "Platform 1",
+    ],
+  },
+],
+```
+
+#### **Projects Section**
+
+```typescript
+projects: [
+  {
+    title: "Your Project Name",
+    description: "Detailed description of your project, its impact, and your role",
+    technologies: ["Technology 1", "Technology 2", "Technology 3"],
+    link: "https://your-project.com",
+    image: "/images/placeholders/project-screenshot.jpg",
+  },
+  // Add more projects...
+],
+```
+
+#### **Experience Timeline**
+
+```typescript
+experience: [
+  {
+    title: "Your Job Title",
+    company: "Company Name",
+    period: "2023 - Present",
+    description: "Your role and responsibilities",
+    achievements: [
+      "Specific achievement with metrics",
+      "Another achievement with impact",
+      "Third achievement with results",
+    ],
+  },
+  // Add more experience...
+],
+```
+
 ### **Styling Customization**
 
 #### **Change Colors**
@@ -284,84 +479,6 @@ Use these prompts with your AI assistant for rapid customization:
 ```
 "Add a new section to showcase [FEATURE_TYPE] in the portfolio. Create the component and integrate it into the main page."
 ```
-
----
-
-## 💻 Using Cursor AI Editor
-
-[Cursor](https://cursor.com) is an AI-powered code editor that can accelerate your development.
-
-### **Setup Cursor**
-
-1. **Download Cursor**: Visit [cursor.com/downloads](https://www.cursor.com/downloads)
-2. **Verify Student Status**: Go to [cursor.com/students](https://cursor.com/students) for free Pro access
-3. **Open Project**: File → Open Folder → Select your portfolio folder
-
-### **Starting Prompt for Cursor**
-
-After opening your project in Cursor, use this comprehensive prompt to analyze the project and gather your career data:
-
-```
-/analyze
-
-I'm building my personal portfolio using this Next.js template. Please analyze the codebase and help me customize it with my personal information.
-
-**My Career Information:**
-- **Name**: [Your Full Name]
-- **Current Role**: [Your Job Title]
-- **Years of Experience**: [X years]
-- **Industry**: [Your Industry - e.g., Software Development, Product Management, Design, etc.]
-- **Key Skills**: [List your top 5-8 technical and soft skills]
-- **Education**: [Your degree(s) and university/college]
-- **Location**: [Your city, state/country]
-- **Professional Summary**: [2-3 sentences about your background and expertise]
-
-**My Projects** (list 3-5 key projects):
-1. **Project Name**: [Brief description, technologies used, outcomes/impact]
-2. **Project Name**: [Brief description, technologies used, outcomes/impact]
-3. **Project Name**: [Brief description, technologies used, outcomes/impact]
-
-**Work Experience** (list your recent roles):
-1. **Company Name** - [Role] (Year-Year): [Key achievements and responsibilities]
-2. **Company Name** - [Role] (Year-Year): [Key achievements and responsibilities]
-
-**Contact Information**:
-- **Email**: [your.email@example.com]
-- **LinkedIn**: [linkedin.com/in/yourprofile]
-- **GitHub**: [github.com/yourusername]
-- **Portfolio/Website**: [if you have one]
-
-**Design Preferences**:
-- **Color Scheme**: [e.g., Blue/Gray, Green/Earth tones, Purple/White, etc.]
-- **Style**: [e.g., Minimalist, Modern, Creative, Professional, etc.]
-- **Special Features**: [Any specific sections or features you want to highlight]
-
-Please help me:
-1. Update all placeholder content with my information
-2. Customize the color scheme and styling to match my preferences
-3. Optimize the content for my specific role and industry
-4. Ensure the portfolio reflects my professional brand
-5. Add any missing sections that would be relevant for my background
-```
-
-### **AI Commands in Cursor**
-
-After the initial analysis, use these commands:
-
-```bash
-# Ask questions about your code
-"How do I change the hero section background color?"
-
-# Make specific changes
-"Update the hero section to include my name 'John Doe' and title 'Product Manager'"
-```
-
-### **Example Cursor Prompts**
-
-- _"Add a hero section welcome message for a product manager named Alice, using bullet points."_
-- _"Change the color scheme from black/white to blue/gray theme."_
-- _"Add a new testimonials section with 3 customer reviews."_
-- _"Optimize the skills section for a frontend developer with React, TypeScript, and UI/UX experience."_
 
 ---
 
