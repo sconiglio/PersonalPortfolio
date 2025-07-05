@@ -2,23 +2,23 @@
 
 **Build and deploy your professional portfolio in under 1 hour using this modern template.**
 
-This guide walks you through every step from initial setup to live deployment, including API integrations, customization, and best practices.
+This comprehensive guide walks you through every step from initial setup to live deployment, including API integrations, customization, and best practices.
 
 ## 📋 Table of Contents
 
-- [🚀 Quick Start (5 minutes)](#-quick-start-5-minutes)
+- [🎯 Prerequisites](#-prerequisites)
+- [⚡ Quick Start (5 minutes)](#-quick-start-5-minutes)
 - [🔐 API Keys Setup](#-api-keys-setup)
 - [🎨 Complete Customization](#-complete-customization)
 - [💻 Using Cursor AI Editor](#-using-cursor-ai-editor)
 - [🚀 Deployment](#-deployment)
 - [📊 Advanced Features](#-advanced-features)
 - [🛠️ Troubleshooting](#️-troubleshooting)
+- [📚 Resources & Support](#-resources--support)
 
 ---
 
-## 🚀 Quick Start (5 minutes)
-
-### Prerequisites
+## 🎯 Prerequisites
 
 **Required Software:**
 
@@ -38,6 +38,10 @@ This guide walks you through every step from initial setup to live deployment, i
 **Student Benefits:**
 
 - **Cursor Pro (Free for students)** - [Verify student status here](https://cursor.com/students) for 1 year of free Pro access
+
+---
+
+## ⚡ Quick Start (5 minutes)
 
 ### Step 1: Get the Template
 
@@ -265,14 +269,58 @@ Use these prompts with your AI assistant for rapid customization:
 2. **Verify Student Status**: Go to [cursor.com/students](https://cursor.com/students) for free Pro access
 3. **Open Project**: File → Open Folder → Select your portfolio folder
 
-### **AI Commands in Cursor**
+### **Starting Prompt for Cursor**
 
-After opening your project, use these commands:
+After opening your project in Cursor, use this comprehensive prompt to analyze the project and gather your career data:
 
-```bash
-# Analyze entire codebase
+```
 /analyze
 
+I'm building my personal portfolio using this Next.js template. Please analyze the codebase and help me customize it with my personal information.
+
+**My Career Information:**
+- **Name**: [Your Full Name]
+- **Current Role**: [Your Job Title]
+- **Years of Experience**: [X years]
+- **Industry**: [Your Industry - e.g., Software Development, Product Management, Design, etc.]
+- **Key Skills**: [List your top 5-8 technical and soft skills]
+- **Education**: [Your degree(s) and university/college]
+- **Location**: [Your city, state/country]
+- **Professional Summary**: [2-3 sentences about your background and expertise]
+
+**My Projects** (list 3-5 key projects):
+1. **Project Name**: [Brief description, technologies used, outcomes/impact]
+2. **Project Name**: [Brief description, technologies used, outcomes/impact]
+3. **Project Name**: [Brief description, technologies used, outcomes/impact]
+
+**Work Experience** (list your recent roles):
+1. **Company Name** - [Role] (Year-Year): [Key achievements and responsibilities]
+2. **Company Name** - [Role] (Year-Year): [Key achievements and responsibilities]
+
+**Contact Information**:
+- **Email**: [your.email@example.com]
+- **LinkedIn**: [linkedin.com/in/yourprofile]
+- **GitHub**: [github.com/yourusername]
+- **Portfolio/Website**: [if you have one]
+
+**Design Preferences**:
+- **Color Scheme**: [e.g., Blue/Gray, Green/Earth tones, Purple/White, etc.]
+- **Style**: [e.g., Minimalist, Modern, Creative, Professional, etc.]
+- **Special Features**: [Any specific sections or features you want to highlight]
+
+Please help me:
+1. Update all placeholder content with my information
+2. Customize the color scheme and styling to match my preferences
+3. Optimize the content for my specific role and industry
+4. Ensure the portfolio reflects my professional brand
+5. Add any missing sections that would be relevant for my background
+```
+
+### **AI Commands in Cursor**
+
+After the initial analysis, use these commands:
+
+```bash
 # Ask questions about your code
 "How do I change the hero section background color?"
 
@@ -285,6 +333,7 @@ After opening your project, use these commands:
 - _"Add a hero section welcome message for a product manager named Alice, using bullet points."_
 - _"Change the color scheme from black/white to blue/gray theme."_
 - _"Add a new testimonials section with 3 customer reviews."_
+- _"Optimize the skills section for a frontend developer with React, TypeScript, and UI/UX experience."_
 
 ---
 
@@ -435,7 +484,7 @@ npm run lint:fix     # Fix linting issues
 npm run test         # Run tests
 
 # Utilities
-npm run type-check   # Check TypeScript types
+npm run typecheck    # Check TypeScript types
 npm run clean        # Clean build files
 ```
 
@@ -501,12 +550,6 @@ After deployment, track these metrics:
 - **Accessibility**: 90+ score
 - **Contact Form**: 100% working
 - **All Links**: 0 broken links
-
----
-
-**Made with ❤️ for the developer community**
-
-_This template is designed to help you showcase your work professionally and effectively. Customize it to reflect your unique style and experience!_
 
 ---
 
