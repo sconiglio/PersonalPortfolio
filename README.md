@@ -510,8 +510,8 @@ _This template is designed to help you showcase your work professionally and eff
 
 ---
 
-## 📄 License
-
-MIT License - feel free to use this template for your own projects!
-
 **Happy building! 🚀**
+
+---
+
+**Created by Lawrence Hua** - A modern portfolio template for developers, designers, and professionals.
